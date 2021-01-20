@@ -1,4 +1,4 @@
-package com.carriedo.moimeun.config.Register;
+package com.carriedo.moimeun.src.Register;
 
 import androidx.appcompat.app.AppCompatActivity;
 

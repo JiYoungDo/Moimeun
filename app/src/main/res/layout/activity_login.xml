@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorConceptWhite"
-    tools:context=".config.Splash.LoginActivity">
+    tools:context=".src.Login_Splash.LoginActivity">
 
     <ImageView
         android:id="@+id/login_iv_icon"
