@@ -12,6 +12,8 @@ import static com.carriedo.moimeun.ApplicationClass.X_ACCESS_TOKEN;
 import static com.carriedo.moimeun.ApplicationClass.sSharedPreferences;
 
 public class XAccessTokenInterceptor implements Interceptor {
+
+
     @NotNull
     @Override
     public Response intercept(@NotNull Chain chain) throws IOException {
