@@ -1,4 +1,4 @@
-package com.carriedo.moimeun.src.Login_Splash;
+package com.carriedo.moimeun.src.Login;
 
 import androidx.appcompat.app.AppCompatActivity;
 

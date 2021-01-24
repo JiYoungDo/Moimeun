@@ -1,7 +1,15 @@
 <resources>
-    <string name="app_name">MoiMeun</string>
+    <string name="app_name">모이믄</string>
     <string name="app_name_kr">모이믄</string>
     <string name="login">로그인</string>
     <string name="register">회원가입</string>
+    <string name="loading">로딩중입니다.</string>
+    <string name="id">아이디</string>
+    <string name="id_check">중복확인</string>
+    <string name="pw">비밀번호</string>
+    <string name="pw_confirm">비밀번호 확인</string>
+    <string name="birthday_format">생년월일(yyyy.MM.dd)</string>
+    <string name="email">이메일</string>
+    <string name="email_confirm">이메일 인증</string>
 
 </resources>

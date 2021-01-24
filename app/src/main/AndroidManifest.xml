@@ -9,15 +9,16 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".src.Register.RegisterActivity"></activity>
-        <activity android:name=".src.Login_Splash.LoginActivity">
+        <activity android:name=".src.Login.LoginActivity"></activity>
+        <activity android:name=".src.Register.RegisterActivity" />
+        <activity android:name=".src.Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".src.Main.MainActivity"></activity>
+        <activity android:name=".src.Main.MainActivity" />
     </application>
 
 </manifest>

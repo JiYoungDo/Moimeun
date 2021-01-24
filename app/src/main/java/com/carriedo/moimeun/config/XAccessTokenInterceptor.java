@@ -22,5 +22,5 @@ public class XAccessTokenInterceptor implements Interceptor {
         }
         return chain.proceed(builder.build());
     }
-    }
 }
+

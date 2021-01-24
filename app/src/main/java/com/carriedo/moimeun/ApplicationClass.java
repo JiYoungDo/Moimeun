@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.carriedo.moimeun.config.XAccessTokenInterceptor;
+
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -20,11 +22,10 @@ public class ApplicationClass extends Application {
     // 서버 주소
     public static String BASE_URL = "ec2-3-14-68-174.us-east-2.compute.amazonaws.com";
 
-
     public static SharedPreferences sSharedPreferences = null;
 
     // SharedPreferences 키 값
-    public static String TAG = "TEMPLATE_APP";
+    public static String TAG = "MoiMeun_app";
 
     // JWT Token 값
     public static String X_ACCESS_TOKEN = "X-ACCESS-TOKEN";
@@ -36,8 +37,6 @@ public class ApplicationClass extends Application {
 
     // Retrofit 인스턴스
     public static Retrofit retrofit;
-
-    public static int usertempToken = 0;
 
     @Override
     public void onCreate() {
