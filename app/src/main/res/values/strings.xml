@@ -12,4 +12,11 @@
     <string name="email">이메일</string>
     <string name="email_confirm">이메일 인증</string>
 
+    <string name="pw_msg">비밀번호가 일치 하지 않습니다.</string>
+    <string name="birth_msg">생년월일 양식이 일치하지 않습니다.</string>
+    <string name="id_msg_ok">사용 가능한 아이디입니다.</string>
+    <string name="id_msg_not_ok">사용 불가능한 아이디입니다.</string>
+    <string name="no_msg">값을 입력해주세요.</string>
+
+
 </resources>

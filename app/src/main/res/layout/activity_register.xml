@@ -57,6 +57,19 @@
                 android:layout_marginRight="160dp"/>
 
             <TextView
+                android:id="@+id/register_tv_id_confirm_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/register_et_id"
+                android:text="사용 가능한 아이디 입니다."
+                android:textSize="14sp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="40dp"
+                android:fontFamily="@font/mediumfont"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
                 android:id="@+id/register_btn_id_check"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -81,7 +94,7 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:background="@drawable/darkgreen_bg_line"
                 android:hint="@string/pw"
                 android:textColorHint="@color/colorConceptDarkGreen"
@@ -116,7 +129,7 @@
                 android:text="비밀번호가 일치 하지 않습니다."
                 android:textSize="14sp"
                 android:textColor="@color/colorConceptDarkGreen"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginRight="40dp"
                 android:fontFamily="@font/mediumfont"
                 android:layout_marginTop="3dp"/>
@@ -147,7 +160,7 @@
                 android:text="생년월일 양식이 일치하지 않습니다."
                 android:textSize="14sp"
                 android:textColor="@color/colorConceptDarkGreen"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="60dp"
                 android:layout_marginRight="40dp"
                 android:fontFamily="@font/mediumfont"
                 android:layout_marginTop="3dp"/>

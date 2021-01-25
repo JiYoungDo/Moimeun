@@ -2,6 +2,7 @@ package com.carriedo.moimeun.src.Register;
 
 import com.carriedo.moimeun.src.Register.interfaces.RegisterActivityView;
 import com.carriedo.moimeun.src.Register.interfaces.RegisterRetrofitInterface;
+import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
 import com.carriedo.moimeun.src.Register.models.RegisterBody;
 import com.carriedo.moimeun.src.Register.models.RegisterResponse;
 
@@ -18,20 +19,18 @@ public class RegisterService {
         this.mRegisterActivityView = mRegisterActivityView;
     }
 
-    // 진짜 서버 통신이 들어가는 부분
-
-    void getTest(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint) {
+    //서버 통신
+    void postRegister(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint) {
         final RegisterRetrofitInterface registerRetrofitInterface = getRetrofit().create(RegisterRetrofitInterface.class);
         registerRetrofitInterface.RegisterTest(new RegisterBody(mCustomerBirth, mCustomerEmail,mCustomerId, mCustomerLevel,mCustomerName, mCustomerPassword,mCustomerPenaltyPoint)).enqueue(new Callback<RegisterResponse>() {
 
-            // 필요할 때 복붙해서 쓰세요요 - 비동기 호출 (물 흐르듯 위에서 아래로 흐르지 않음) - 비동기 오류를 겪을 수도 있다.
+            // 비동기 호출 - 비동기 오류 주의 코드
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                 // 성공시
                 final RegisterResponse registerResponse = response.body();
                 if (registerResponse == null) {
-                    // 이게 어디로 갈까? mainactivtiy에 있는 validateFailure로 간다.
-                    mRegisterActivityView.RegisterFailure(registerResponse.getMessage());
+                    mRegisterActivityView.RegisterFailure("통신 성공, null 값");
                     return;
                 }
 
@@ -41,8 +40,38 @@ public class RegisterService {
             // API 통신이 실패했을 시
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
-                mRegisterActivityView.RegisterFailure(null);
+                mRegisterActivityView.RegisterFailure("통신 실패");
             }
         });
     }
+
+
+    void getIdCheck(String id) {
+        final RegisterRetrofitInterface registerRetrofitInterface = getRetrofit().create(RegisterRetrofitInterface.class);
+        registerRetrofitInterface.IdCheckTest(id).enqueue(new Callback<IdCheckResponse>() {
+
+            // 비동기 호출 - 비동기 오류 주의 코드
+            @Override
+            public void onResponse(Call<IdCheckResponse> call, Response<IdCheckResponse> response) {
+                // 성공시
+                final IdCheckResponse idCheckResponse = response.body();
+                if (idCheckResponse == null) {
+                    mRegisterActivityView.IdCheckFailure("통신 성공, null 값");
+                    return;
+                }
+
+                mRegisterActivityView.IdCheckSuccess(idCheckResponse.getMessage());
+            }
+
+            // API 통신이 실패했을 시
+            @Override
+            public void onFailure(Call<IdCheckResponse> call, Throwable t) {
+                mRegisterActivityView.IdCheckFailure("통신 실패");
+            }
+        });
+    }
+
+
+
+
 }
