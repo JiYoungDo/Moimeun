@@ -33,10 +33,15 @@
         app:layout_constraintTop_toBottomOf="@id/main_iv_three_person"
         app:layout_constraintBottom_toTopOf="@id/main_bnv"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp">
 
-        <!--    리사이클러뷰-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_rv"
+            android:layout_width="match_parent"
+            android:layout_gravity="top"
+            android:layout_height="match_parent"/>
 
     </ScrollView>
 

@@ -144,12 +144,12 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
         name_et = findViewById(R.id.register_et_name);
 
 
-        // 검증 절차 필요
+        // [!!!] 검증 절차 필요
         birthday_et = findViewById(R.id.register_et_birthday);
         birthday_msg_tv = findViewById(R.id.register_tv_birthday_confirm_msg);
         birthday_msg_tv.setText("");
 
-        // 검증 절차 필요
+        // [!!!] 검증 절차 필요
         email_et = findViewById(R.id.register_et_email);
         email_confirm_tv =findViewById(R.id.register_tv_email_confirm_btn);
 

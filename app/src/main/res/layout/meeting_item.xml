@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp"
+    android:padding="15dp"
     android:background="@color/colorConceptWhite"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/all_dark_green_roung_bg"
             android:text="모이믄 앱 개발 모임"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:fontFamily="@font/mediumfont"
             android:paddingTop="20dp"
             android:paddingBottom="20dp"
