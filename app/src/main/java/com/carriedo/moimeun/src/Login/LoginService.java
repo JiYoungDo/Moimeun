@@ -31,7 +31,7 @@ public class LoginService {
             public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
                 final LoginResponse loginResponse = response.body();
                 if (loginResponse.getIsSuccess() == false) {
-                    loginActivityView.LoginFailure(loginResponse.getCode());
+                    loginActivityView.LoginFailure(loginResponse.getCode(), loginResponse.getMessage());
                     return;
                 }
 
@@ -41,7 +41,7 @@ public class LoginService {
             // API 통신이 실패 했을 시
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                loginActivityView.LoginFailure(0);
+                loginActivityView.LoginFailure(0, "no message");
             }
         });
     }

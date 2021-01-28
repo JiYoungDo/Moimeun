@@ -1,18 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/colorConceptWhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".src.Main.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+        android:id="@+id/main_iv_title"
+        android:src="@drawable/my_meeting_title"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/main_iv_three_person"
+        android:src="@drawable/three_person"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/main_iv_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="35dp"/>
+
+    <ScrollView
+        android:id="@+id/main_sv"
+        app:layout_constraintTop_toBottomOf="@id/main_iv_three_person"
+        app:layout_constraintBottom_toTopOf="@id/main_bnv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--    리사이클러뷰-->
+
+    </ScrollView>
+
+
+
+   <com.google.android.material.bottomnavigation.BottomNavigationView
+       android:id="@+id/main_bnv"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:foregroundGravity="center"
+       android:background="@color/colorConceptDarkGreen"
+       app:menu="@menu/main_bottom_menu"
+       app:itemTextColor="@color/colorConceptWhite"
+       app:layout_constraintRight_toRightOf="parent"
+       app:layout_constraintLeft_toLeftOf="parent"
+       app:labelVisibilityMode="labeled"
+       app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

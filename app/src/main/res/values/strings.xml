@@ -19,5 +19,8 @@
     <string name="no_msg">값을 입력해주세요.</string>
     <string name="name">이 름</string>
 
+    <string name="menu_1">내 모임</string>
+    <string name="menu_2">내 캘린더</string>
+    <string name="menu_3">내 정보</string>
 
 </resources>

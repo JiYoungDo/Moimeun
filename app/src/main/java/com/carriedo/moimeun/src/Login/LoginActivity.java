@@ -13,6 +13,7 @@ import android.widget.Toast;
 import com.carriedo.moimeun.BaseActivity;
 import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.Login.interfaces.LoginActivityView;
+import com.carriedo.moimeun.src.Main.MainActivity;
 import com.carriedo.moimeun.src.Splash.SplashActivity;
 
 public class LoginActivity extends BaseActivity implements LoginActivityView {
@@ -79,13 +80,18 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
         // 로그인 성공시 액션
         Toast.makeText(this,"로그인 성공",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 
-    @Override
-    public void LoginFailure(int code) {
+
+    // 코드 구문하여 처리리
+   @Override
+    public void LoginFailure(int code, String message) {
         hideProgressDialog();
 
         // 로그인 실패시 액션
-        Toast.makeText(this,"로그인 실패",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"로그인 실패: "+message,Toast.LENGTH_SHORT).show();
     }
 }
