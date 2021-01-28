@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.carriedo.moimeun.config.XAccessTokenInterceptor;
+
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -20,7 +20,7 @@ public class ApplicationClass extends Application {
     public static MediaType MEDIA_TYPE_JPEG = MediaType.parse("image/jpeg");
 
     // 서버 주소
-    public static String BASE_URL = "ec2-3-14-68-174.us-east-2.compute.amazonaws.com";
+    public static String BASE_URL = "http://ec2-3-14-68-174.us-east-2.compute.amazonaws.com";
 
     public static SharedPreferences sSharedPreferences = null;
 
@@ -53,7 +53,6 @@ public class ApplicationClass extends Application {
             OkHttpClient client = new OkHttpClient.Builder()
                     .readTimeout(5000, TimeUnit.MILLISECONDS)
                     .connectTimeout(5000, TimeUnit.MILLISECONDS)
-                    .addNetworkInterceptor(new XAccessTokenInterceptor()) // JWT 자동 헤더 전송
                     .build();
 
             retrofit = new Retrofit.Builder()

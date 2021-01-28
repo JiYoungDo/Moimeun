@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -51,10 +53,7 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
         // 알람 메세지 String  값에서 가져 와 놓기
         pw_alert_msg = getResources().getString(R.string.pw_msg);
         birth_alert_msg = getResources().getString(R.string.birth_msg);
-        id_alert_msg_ok = getResources().getString(R.string.id_msg_ok);
-        id_alert_msg_not_ok = getResources().getString(R.string.id_msg_not_ok);
         empty_msg = getResources().getString(R.string.no_msg);
-
 
 
         // 뒤로가기
@@ -73,6 +72,7 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
         id_check_tv = findViewById(R.id.register_btn_id_check);
         id_confirm_msg_tv = findViewById(R.id.register_tv_id_confirm_msg);
         id_confirm_msg_tv.setText("");
+
         // 아이디 중복 체크
         id_check_tv.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,12 +80,10 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
 
                 Is_Id_Ok = false;
 
-                // 클릭 배경 전환
-                id_check_tv.setBackground(getResources().getDrawable(R.drawable.darkgreen_bg_line));
-                id_check_tv.setBackground(getResources().getDrawable(R.drawable.white_line_fill_darkgreen));
 
                 // 사용자가 입력한 아이디 값 가져오기
                 user_id = id_et.getText().toString();
+                // Log.d("user_id",user_id);
 
 
                 if(user_id.equals(""))
@@ -94,6 +92,7 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
                 }
                 else
                 {
+                    Log.d("user_id",user_id);
                     tryIdCheck(user_id);
                 }
 
@@ -104,6 +103,30 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
 
         pw_et= findViewById(R.id.register_et_pw);
         pw_confirm_et = findViewById(R.id.register_et_pw_confirm);
+        pw_confirm_et.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                user_pw = pw_et.getText().toString();
+
+                if(!pw_confirm_et.getText().toString().equals(user_pw))
+                {
+                    pw_confirm_msg_tv.setText(pw_alert_msg);
+                }else
+                {
+                    pw_confirm_msg_tv.setText("");
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         pw_confirm_msg_tv = findViewById(R.id.register_tv_pw_confirm_msg);
         pw_confirm_msg_tv.setText("");
 
@@ -115,6 +138,12 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
         email_confirm_tv =findViewById(R.id.register_tv_email_confirm_btn);
 
         register_tv = findViewById(R.id.register_tv_register);
+        register_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tryPostRegister("2021-01-28","12@12.com","1212","1","길동","1234","1");
+            }
+        });
 
     }
 
@@ -134,19 +163,21 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
     // tryPostRegister 성공시
     @Override
     public void RegisterSuccess(String message) {
-
+        hideProgressDialog();
+        Log.d("회원 가입 성공", message);
     }
 
     // tryPostRegister 실패시(null 값이거나, 통신 실패)
     @Override
     public void RegisterFailure(String message) {
-
+        hideProgressDialog();
+        Log.d("회원 가입 실패", message);
     }
 
     // tryIdCheck 성공시
     @Override
     public void IdCheckSuccess(String message) {
-
+        hideProgressDialog();
         Log.d("아이디 중복 검사 성공", message);
 
         if(message.equals("성공")) {
@@ -163,7 +194,7 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
     // tryIdCheck 실패시 (null 값이거나, 통신 실패)
     @Override
     public void IdCheckFailure(String message) {
-
+        hideProgressDialog();
         Log.d("아이디 중복 검사 실패", message);
     }
 }

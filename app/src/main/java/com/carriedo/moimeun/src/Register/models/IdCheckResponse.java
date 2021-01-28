@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
 public class IdCheckResponse {
 
     @SerializedName("code")
-    private Long mCode;
+    private int mCode;
     @SerializedName("customerInfo")
     private CustomerInfo mCustomerInfo;
     @SerializedName("isSuccess")
@@ -15,7 +15,7 @@ public class IdCheckResponse {
     @SerializedName("message")
     private String mMessage;
 
-    public Long getCode() {
+    public int getCode() {
         return mCode;
     }
     public CustomerInfo getCustomerInfo() {
