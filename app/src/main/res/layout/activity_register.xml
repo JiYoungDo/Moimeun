@@ -135,7 +135,7 @@
                 android:layout_marginTop="3dp"/>
 
             <EditText
-                android:id="@+id/register_et_birthday"
+                android:id="@+id/register_et_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/register_et_pw_confirm"
@@ -144,6 +144,24 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_marginTop="30dp"
+                android:background="@drawable/darkgreen_bg_line"
+                android:hint="@string/name"
+                android:textColorHint="@color/colorConceptDarkGreen"
+                android:textColor="@color/colorBlack"
+                android:padding="15dp"
+                android:fontFamily="@font/mediumfont"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/register_et_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/register_et_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/darkgreen_bg_line"
                 android:hint="@string/birthday_format"
                 android:textColorHint="@color/colorConceptDarkGreen"

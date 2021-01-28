@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class RegisterResponse {
 
     @SerializedName("code")
-    private Long code;
+    private int  code;
     @SerializedName("customerInfo")
     private CustomerInfo customerInfo;
     @SerializedName("isSuccess")
@@ -14,7 +14,7 @@ public class RegisterResponse {
     @SerializedName("message")
     private String message;
 
-    public Long getCode() {
+    public int getCode() {
         return code;
     }
 

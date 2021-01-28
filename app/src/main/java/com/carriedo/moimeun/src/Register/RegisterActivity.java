@@ -19,7 +19,7 @@ import com.carriedo.moimeun.src.Splash.SplashActivity;
 
 public class RegisterActivity extends BaseActivity implements RegisterActivityView {
 
-    final RegisterService registerService = new RegisterService(this);
+    RegisterService registerService = new RegisterService(this);
 
     // res/layout
     ImageView back_btn;
@@ -29,6 +29,7 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
     EditText pw_et;
     EditText pw_confirm_et;
     TextView pw_confirm_msg_tv;
+    EditText name_et;
     EditText birthday_et;
     TextView birthday_msg_tv;
     EditText email_et;
@@ -39,10 +40,12 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
     String pw_alert_msg, birth_alert_msg, id_alert_msg_ok, id_alert_msg_not_ok, empty_msg;
 
     // 사용자 입력 값들
-    String user_id, user_pw, user_pw_confirm, user_birth, user_email;
+    String user_id, user_pw, user_pw_confirm, user_birth, user_email , user_name;
 
     // boolean
     boolean Is_Id_Ok = false;
+    boolean Is_Pw_Ok = false;
+
 
 
     @Override
@@ -102,6 +105,9 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
 
 
         pw_et= findViewById(R.id.register_et_pw);
+        pw_confirm_msg_tv = findViewById(R.id.register_tv_pw_confirm_msg);
+        pw_confirm_msg_tv.setText("");
+
         pw_confirm_et = findViewById(R.id.register_et_pw_confirm);
         pw_confirm_et.addTextChangedListener(new TextWatcher() {
             @Override
@@ -118,22 +124,32 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
                 }else
                 {
                     pw_confirm_msg_tv.setText("");
+                    Is_Pw_Ok = true;
                 }
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
+                if(pw_et.getText().toString().equals(pw_confirm_et.getText().toString()))
+                {
+                    user_pw = pw_confirm_et.getText().toString();
+                }
+                else
+                {
+                    Is_Pw_Ok = false;
+                }
             }
         });
 
-        pw_confirm_msg_tv = findViewById(R.id.register_tv_pw_confirm_msg);
-        pw_confirm_msg_tv.setText("");
+        name_et = findViewById(R.id.register_et_name);
 
+
+        // 검증 절차 필요
         birthday_et = findViewById(R.id.register_et_birthday);
         birthday_msg_tv = findViewById(R.id.register_tv_birthday_confirm_msg);
         birthday_msg_tv.setText("");
 
+        // 검증 절차 필요
         email_et = findViewById(R.id.register_et_email);
         email_confirm_tv =findViewById(R.id.register_tv_email_confirm_btn);
 
@@ -141,7 +157,10 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
         register_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tryPostRegister("2021-01-28","12@12.com","1212","1","길동","1234","1");
+                if(Is_Id_Ok && Is_Pw_Ok)
+                {
+                    tryPostRegister(birthday_et.getText().toString(),email_et.getText().toString(),user_id,"1",name_et.getText().toString(),user_pw,"1");
+                }
             }
         });
 
@@ -182,12 +201,12 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
 
         if(message.equals("성공")) {
             id_alert_msg_ok = getResources().getString(R.string.id_msg_ok);
-            id_confirm_msg_tv.setText(id_alert_msg_ok);
-            Is_Id_Ok = true;
+            id_confirm_msg_tv.setText(id_alert_msg_not_ok);
         }else
         {
             id_alert_msg_not_ok = getResources().getString(R.string.id_msg_not_ok);
-            id_confirm_msg_tv.setText(id_alert_msg_not_ok);
+            id_confirm_msg_tv.setText(id_alert_msg_ok);
+            Is_Id_Ok = true;
         }
     }
 

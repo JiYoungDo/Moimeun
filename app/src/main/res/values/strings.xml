@@ -17,6 +17,7 @@
     <string name="id_msg_ok">사용 가능한 아이디입니다.</string>
     <string name="id_msg_not_ok">사용 불가능한 아이디입니다.</string>
     <string name="no_msg">값을 입력해주세요.</string>
+    <string name="name">이 름</string>
 
 
 </resources>
