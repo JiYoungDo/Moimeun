@@ -1,4 +1,4 @@
-package com.carriedo.moimeun.src.Main;
+package com.carriedo.moimeun.src.MeetingFragment;
 
 public class MeetingItem {
     String meeting_title;

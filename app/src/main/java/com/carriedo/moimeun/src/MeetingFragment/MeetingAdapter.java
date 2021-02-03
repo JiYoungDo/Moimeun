@@ -1,7 +1,6 @@
-package com.carriedo.moimeun.src.Main;
+package com.carriedo.moimeun.src.MeetingFragment;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

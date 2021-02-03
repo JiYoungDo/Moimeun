@@ -6,12 +6,12 @@
         android:enabled="true"
         android:title="@string/menu_1"/>
     <item
-        android:id="@+id/a_newItem"
+        android:id="@+id/main_menu_my_calendar"
         android:icon="@drawable/flower_2"
         android:enabled="true"
         android:title="@string/menu_2"/>
     <item
-        android:id="@+id/a_cameraItem"
+        android:id="@+id/main_menu_my_mypage"
         android:icon="@drawable/flower_3"
         android:enabled="true"
         android:checked="true"

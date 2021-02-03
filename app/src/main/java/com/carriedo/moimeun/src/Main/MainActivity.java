@@ -1,52 +1,109 @@
 package com.carriedo.moimeun.src.Main;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 
+import com.carriedo.moimeun.BaseActivity;
 import com.carriedo.moimeun.R;
+import com.carriedo.moimeun.src.CalendarFragment.CalendarFragment;
+import com.carriedo.moimeun.src.MeetingFragment.MeetingAdapter;
+import com.carriedo.moimeun.src.MeetingFragment.MeetingItem;
+import com.carriedo.moimeun.src.MeetingFragment.MettingFragment;
+import com.carriedo.moimeun.src.MyPageFragment.MypageFragment;
+import com.getbase.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    private MeetingAdapter meetingAdapter;
-    RecyclerView meeting_recyclerview;
-    ArrayList meeting_list;
+    FloatingActionButton floatingActionButton;
+    BottomNavigationView bottomNavigationView;
+
+    MettingFragment mettingFragment;
+    CalendarFragment calendarFragment;
+    MypageFragment mypageFragment;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        meeting_recyclerview = findViewById(R.id.main_rv);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
-        meeting_recyclerview.setLayoutManager(linearLayoutManager);
-
-        meeting_list = new ArrayList<>();
-
-        // Dummy
-        MeetingItem meetingItem = new MeetingItem("소융과 모여라","87");
-        MeetingItem meetingItem_1 = new MeetingItem("모이믄 앱 런칭 모임","8");
-
-        meeting_list.add(meetingItem);
-        meeting_list.add(meetingItem_1);
-
-
-
-        // 어댑터
-        meetingAdapter = new MeetingAdapter(meeting_list);
-        meeting_recyclerview.setAdapter(meetingAdapter);
-        meetingAdapter.setOnItemClickListener(new MeetingAdapter.OnItemClickListener() {
+        //fab
+        floatingActionButton = findViewById(R.id.main_fb);
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(View v, int pos) {
+            public void onClick(View v) {
 
             }
         });
 
-        meetingAdapter.notifyDataSetChanged();
+
+        //bnv
+        bottomNavigationView = findViewById(R.id.main_bnv);
+
+
+        // fragment
+        mettingFragment = new MettingFragment();
+        calendarFragment = new CalendarFragment();
+        mypageFragment = new MypageFragment();
+
+        // 처음에 띄어줄 뷰 세팅
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.main_fl, mettingFragment).commitAllowingStateLoss();
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId())
+                {
+                    case R.id.main_menu_my_meeting:
+                    {
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.main_fl, mettingFragment).commitAllowingStateLoss();
+                        return true;
+                    }
+                    case R.id.main_menu_my_calendar:
+                    {
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.main_fl, calendarFragment).commitAllowingStateLoss();
+                        return true;
+                    }
+                    case R.id.main_menu_my_mypage:
+                    {
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.main_fl, mypageFragment).commitAllowingStateLoss();
+                        return true;
+                    }
+                    default:
+                        return false;
+                }
+            }
+        });
     }
+
+    public void onChangeFragment(int index){}
+    {
+//        if(index == 7)
+//        {
+//            // 7번일 때는 changeprofile로
+//            getSupportFragmentManager().beginTransaction().replace(R.id.activity_a_fl,changeFragment).commitAllowingStateLoss();
+//            1)  Activity 클래스의 getFragmentManager() 함수를 사용하여 FragmentManager 에 대한 참조를 획득한 다음
+//            2) FragmentManager 의 beginTransaction() 함수를 호출하여 FragmentTransaction 을 시작합니다.
+//            3) 그런 다음 FragmentTransaction 의 add() 함수를 이용하여 Fragment 를 Activity 의 ViewGroup(FrameLayout)에 추가
+//            4) Fragment와 관련된 모든 작업이 완료되면 FragmentTransaction의 commit() 함수를 호출하여 Fragment와 관련된 작업이 완료되었음을 알려줍니다.
+//        }
+
+    }
+
+
 }
