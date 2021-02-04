@@ -1,9 +1,6 @@
 package com.carriedo.moimeun.src.Main;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,14 +10,11 @@ import android.view.View;
 import com.carriedo.moimeun.BaseActivity;
 import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.CalendarFragment.CalendarFragment;
-import com.carriedo.moimeun.src.MeetingFragment.MeetingAdapter;
-import com.carriedo.moimeun.src.MeetingFragment.MeetingItem;
+import com.carriedo.moimeun.src.MakeMeeting.MakeMeetingActivity;
 import com.carriedo.moimeun.src.MeetingFragment.MettingFragment;
 import com.carriedo.moimeun.src.MyPageFragment.MypageFragment;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends BaseActivity {
 
@@ -43,7 +37,9 @@ public class MainActivity extends BaseActivity {
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainActivity.this, MakeMeetingActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

@@ -22,5 +22,25 @@
     <string name="menu_1">내 모임</string>
     <string name="menu_2">내 캘린더</string>
     <string name="menu_3">내 정보</string>
+    <string name="meeting_name">모임 이름 </string>
+    <string name="metting_pw">모임 비밀번호</string>
+    <string name="meeting_start_date">모임 시작일</string>
+    <string name="meeting_end_date">모임 종료일</string>
+    <string name="meeting_sm">소규모</string>
+    <string name="meeting_bm">대규모</string>
+    <string name="sm_bm_msg">소규모: 5인 이하, 대규모: 5인 초과</string>
+    <string name="repeat_ok">반복  함</string>
+    <string name="repeat_not_ok">반복 안함</string>
+    <string name="late_money_func_on">지각비 기능 ON</string>
+    <string name="late_money_func_off">지각비 기능 OFF</string>
+    <string name="location_func_on">위치 추적 기능 ON</string>
+    <string name="location_func_off">위치 추적 기능 OFF</string>
+    <string name="auto_link">모임 링크 생성하기 (클릭)</string>
+    <string name="link_msg">생성된 링크를 공유하여 구성원을 초대할 수 있습니다 :)</string>
+    <string name="create_meeting">모임 만들기</string>
+    <string name="profile_name">프로필 이름</string>
+    <string name="penalty">벌점</string>
+    <string name="profile_id">프로필 아이디</string>
+    <string name="profile_level">Lv.</string>
 
 </resources>

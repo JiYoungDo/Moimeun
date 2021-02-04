@@ -61,4 +61,7 @@ dependencies {
 
     // animation floating button
     implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+    // circle image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

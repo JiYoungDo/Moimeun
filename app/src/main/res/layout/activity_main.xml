@@ -22,8 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/main_bnv"
-        android:backgroundTint="@color/colorConceptDarkGreen"
-        android:src="@drawable/plus"
+        app:fab_icon="@drawable/plus"
+        app:fab_colorNormal="@color/colorConceptGreen"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"/>

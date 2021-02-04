@@ -1,9 +1,277 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/colorConceptWhite"
     android:layout_height="match_parent"
-    tools:context=".src.MakeMeetingActivity">
+    tools:context=".src.MakeMeeting.MakeMeetingActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/make_mt_iv_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_back_arrow"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <ImageView
+        android:id="@+id/make_mt_iv_flower"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/flower_deco" />
+
+    <ScrollView
+        android:id="@+id/make_mt_sv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/make_mt_iv_back_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="60dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/make_mt_et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:hint="@string/meeting_name"
+                android:textColorHint="@color/colorConceptDarkGreen"
+                android:textColor="@color/colorBlack"
+                android:padding="15dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"/>
+
+            <EditText
+                android:id="@+id/make_mt_et_pw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:hint="@string/metting_pw"
+                android:textColorHint="@color/colorConceptDarkGreen"
+                android:textColor="@color/colorBlack"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_name"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"/>
+
+<!--            모임 시작일/종료일 누르면 데이트 피커 다이얼로그 띄우기-->
+            <TextView
+                android:id="@+id/make_mt_et_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/meeting_start_date"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_pw"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="150dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/make_mt_et_start_date"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/darkgreen_line_bg"
+                android:text="@string/repeat_ok"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:textSize="18sp"
+                android:padding="15dp"
+                android:gravity="center"
+                android:fontFamily="@font/mediumfont"/>
+
+
+            <TextView
+                android:id="@+id/make_mt_et_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/meeting_end_date"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_start_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"/>
+
+          <RadioGroup
+              android:id="@+id/make_mt_rg_sm_bm"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              app:layout_constraintTop_toBottomOf="@id/make_mt_et_end_date"
+              android:orientation="horizontal"
+              android:layout_marginTop="30dp">
+
+              <androidx.appcompat.widget.AppCompatRadioButton
+                  android:id="@+id/make_mt_rb_sm"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_sm"
+                  android:paddingTop="15dp"
+                  android:paddingBottom="15dp"
+                  android:textSize="14sp"
+                  android:buttonTint="@color/colorConceptGreen"
+                  android:textColor="@color/colorConceptDarkGreen"
+                  android:layout_marginRight="5dp"
+                  android:background="@drawable/darkgreen_line_bg"/>
+
+              <androidx.appcompat.widget.AppCompatRadioButton
+                  android:id="@+id/make_mt_rb_bm"
+                  android:layout_width="100dp"
+                  android:layout_height="wrap_content"
+                  android:text="@string/meeting_bm"
+                  android:paddingTop="15dp"
+                  android:paddingBottom="15dp"
+                  android:buttonTint="@color/colorConceptGreen"
+                  android:textColor="@color/colorConceptDarkGreen"
+                  android:layout_marginLeft="5dp"
+                  android:background="@drawable/darkgreen_line_bg"/>
+          </RadioGroup>
+
+            <TextView
+                android:id="@+id/make_mt_tv_sm_bm_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_rg_sm_bm"
+                app:layout_constraintLeft_toLeftOf="@id/make_mt_rg_sm_bm"
+                app:layout_constraintRight_toRightOf="@id/make_mt_rg_sm_bm"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/sm_bm_msg"
+                android:textSize="12sp"
+                android:fontFamily="@font/mediumfont"/>
+
+            <TextView
+                android:id="@+id/make_mt_et_late_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/late_money_func_off"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_tv_sm_bm_msg"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"/>
+
+<!--            on 누르면 , 위치 정보 받을 수 있는 허용 알림 받아야 함.-->
+            <TextView
+                android:id="@+id/make_mt_et_lcation_func"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/location_func_off"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_late_money"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/make_mt_et_auto_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkgreen_line_bg"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/auto_link"
+                android:padding="15dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_lcation_func"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/make_mt_tv_link_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_auto_link"
+                app:layout_constraintLeft_toLeftOf="@id/make_mt_et_auto_link"
+                app:layout_constraintRight_toRightOf="@id/make_mt_et_auto_link"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/link_msg"
+                android:textSize="12sp"
+                android:fontFamily="@font/mediumfont"/>
+
+
+
+            <TextView
+                android:id="@+id/make_mt_tv_create_meeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_tv_link_msg"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/create_meeting"
+                android:fontFamily="@font/mediumfont"
+                android:background="@drawable/darkgreen_line_bg"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:drawableRight="@drawable/three_person_small"
+                android:drawableLeft="@drawable/three_person_small"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorConceptWhite"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_tv_create_meeting"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
