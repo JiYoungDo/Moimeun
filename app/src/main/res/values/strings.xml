@@ -8,7 +8,7 @@
     <string name="id_check">중복확인</string>
     <string name="pw">비밀번호</string>
     <string name="pw_confirm">비밀번호 확인</string>
-    <string name="birthday_format">생년월일(yyyy.MM.dd)</string>
+    <string name="birthday_format">생년월일</string>
     <string name="email">이메일</string>
     <string name="email_confirm">이메일 인증</string>
 

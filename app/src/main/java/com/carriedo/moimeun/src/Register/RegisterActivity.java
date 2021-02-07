@@ -2,12 +2,14 @@ package com.carriedo.moimeun.src.Register;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -16,6 +18,8 @@ import com.carriedo.moimeun.BaseActivity;
 import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.Register.interfaces.RegisterActivityView;
 import com.carriedo.moimeun.src.Splash.SplashActivity;
+
+import java.util.Calendar;
 
 public class RegisterActivity extends BaseActivity implements RegisterActivityView {
 
@@ -30,11 +34,12 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
     EditText pw_confirm_et;
     TextView pw_confirm_msg_tv;
     EditText name_et;
-    EditText birthday_et;
-    TextView birthday_msg_tv;
+    TextView birthday_tv;
     EditText email_et;
     TextView email_confirm_tv;
     TextView register_tv;
+    DatePicker datePicker;
+    Calendar calendar;
 
     // 알람 메세지 값
     String pw_alert_msg, birth_alert_msg, id_alert_msg_ok, id_alert_msg_not_ok, empty_msg;
@@ -141,17 +146,35 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
             }
         });
 
+        // 이름
         name_et = findViewById(R.id.register_et_name);
 
 
-        // [!!!] 검증 절차 필요
-        birthday_et = findViewById(R.id.register_et_birthday);
-        birthday_msg_tv = findViewById(R.id.register_tv_birthday_confirm_msg);
-        birthday_msg_tv.setText("");
+        // 생일 - 데이트 피커 - 현재 날짜
+        birthday_tv = findViewById(R.id.register_tv_birthday);
+        datePicker = findViewById(R.id.register_date_picker);
+
+        birthday_tv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                datePicker.callOnClick();
+                calendar = Calendar.getInstance();
+                int year = calendar.get(calendar.YEAR);
+                int month = calendar.get(calendar.MONTH);
+                int dayOfMonth = calendar.get(calendar.DAY_OF_MONTH);
+
+                DatePickerDialog dialog = new DatePickerDialog(RegisterActivity.this, listener, year, month, dayOfMonth);
+                dialog.show();
+            }
+        });
+
+
 
         // [!!!] 검증 절차 필요
         email_et = findViewById(R.id.register_et_email);
         email_confirm_tv =findViewById(R.id.register_tv_email_confirm_btn);
+
+
 
         register_tv = findViewById(R.id.register_tv_register);
         register_tv.setOnClickListener(new View.OnClickListener() {
@@ -159,12 +182,22 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
             public void onClick(View v) {
                 if(Is_Id_Ok && Is_Pw_Ok)
                 {
-                    tryPostRegister(birthday_et.getText().toString(),email_et.getText().toString(),user_id,"1",name_et.getText().toString(),user_pw,"1");
+                    user_name = name_et.getText().toString();
+                    tryPostRegister(user_birth,email_et.getText().toString(),user_id,"1",user_name,user_pw,"1");
                 }
             }
         });
 
     }
+
+    private DatePickerDialog.OnDateSetListener listener = new DatePickerDialog.OnDateSetListener() {
+        @Override
+        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+            int month_new = month+1;
+            birthday_tv.setText(year+"-"+month_new+"-"+dayOfMonth);
+            user_birth = year+"-"+month_new+"-"+dayOfMonth;
+        }
+    };
 
     private void tryPostRegister(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint)
     {
