@@ -42,5 +42,7 @@
     <string name="penalty">벌점</string>
     <string name="profile_id">프로필 아이디</string>
     <string name="profile_level">Lv.</string>
+    <string name="total_meeting_count">"총 모임횟수 : "</string>
+    <string name="total_meeting_late_count">"총 지각횟수 : "</string>
 
 </resources>

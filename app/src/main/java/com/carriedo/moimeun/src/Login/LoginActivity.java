@@ -1,8 +1,7 @@
 package com.carriedo.moimeun.src.Login;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,8 +12,13 @@ import android.widget.Toast;
 import com.carriedo.moimeun.BaseActivity;
 import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.Login.interfaces.LoginActivityView;
+import com.carriedo.moimeun.src.Login.models.LoginResponse;
 import com.carriedo.moimeun.src.Main.MainActivity;
 import com.carriedo.moimeun.src.Splash.SplashActivity;
+
+import static com.carriedo.moimeun.ApplicationClass.TAG;
+import static com.carriedo.moimeun.ApplicationClass.sSharedPreferences;
+
 
 public class LoginActivity extends BaseActivity implements LoginActivityView {
 
@@ -75,11 +79,19 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
     }
 
     @Override
-    public void LoginSuccess(int code) {
+    public void LoginSuccess(LoginResponse loginResponse) {
         hideProgressDialog();
+
+        String id = loginResponse.getCustomerInfo().getCustomerId();
 
         // 로그인 성공시 액션
         Toast.makeText(this,"로그인 성공",Toast.LENGTH_SHORT).show();
+        // sharedPreference에 저장
+        sSharedPreferences = getSharedPreferences(TAG,MODE_PRIVATE);
+        SharedPreferences.Editor editor = sSharedPreferences.edit();
+        editor.putString("user_id",id);
+        editor.commit();
+
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         finish();

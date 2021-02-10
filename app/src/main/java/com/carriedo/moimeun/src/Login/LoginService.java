@@ -35,7 +35,7 @@ public class LoginService {
                     return;
                 }
 
-                loginActivityView.LoginSuccess(loginResponse.getCode());
+                loginActivityView.LoginSuccess(loginResponse);
             }
 
             // API 통신이 실패 했을 시

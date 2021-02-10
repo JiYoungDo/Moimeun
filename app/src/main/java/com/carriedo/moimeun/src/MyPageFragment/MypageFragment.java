@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,10 +12,15 @@ import androidx.fragment.app.Fragment;
 
 import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.Main.MainActivity;
+import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageActivityView;
+import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
 
-public class MypageFragment extends Fragment {
+public class MypageFragment extends Fragment implements MypageActivityView {
+
     ViewGroup viewGroup;
     MainActivity mainActivity;
+
+    MypageService mypageService = new MypageService(this);
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -52,5 +55,23 @@ public class MypageFragment extends Fragment {
 //        });
         return viewGroup;
     }
+
+
+    private void tryGetMypageInfo(String user_id)
+    {
+        mypageService.getMypage(user_id);
+    }
+
+
+    @Override
+    public void MypageSuccess(IdCheckResponse idCheckResponse) {
+
+    }
+
+    @Override
+    public void MypageFailure(String message) {
+
+    }
+
 
 }

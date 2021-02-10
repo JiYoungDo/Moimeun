@@ -1,124 +1,207 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorConceptWhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-    <ImageView
-        android:id="@+id/mypage_iv_title"
-        android:src="@drawable/my_page_title"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="20dp" />
-
-
-    <View
-        android:id="@+id/mypage_line_1"
-        app:layout_constraintTop_toBottomOf="@id/mypage_iv_title"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/colorConceptDarkGreen"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/colorConceptWhite"
         android:layout_width="match_parent"
-        android:layout_height="2dp"/>
+        android:layout_height="match_parent">
 
 
-<!--    아직 처리 안됨-->
-    <ImageView
-        android:id="@+id/mypage_civ_profile"
-        app:layout_constraintTop_toBottomOf="@id/mypage_line_1"
-        android:layout_marginTop="20dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:src="@drawable/ic_person"
-        android:scaleType="fitXY"
-        android:foregroundGravity="center"
-        android:layout_width="80dp"
-        android:layout_height="80dp"/>
+        <ImageView
+            android:id="@+id/mypage_iv_title"
+            android:src="@drawable/my_page_title"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp" />
 
 
-    <TextView
-        android:id="@+id/mypage_tv_profile_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorConceptDarkGreen"
-        android:text="@string/profile_name"
-        android:fontFamily="@font/mediumfont"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/mypage_civ_profile"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="5dp"
-        app:layout_constraintRight_toRightOf="parent"/>
-
-    <ImageView
-        android:id="@+id/mypage_iv_flower_name"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:layout_constraintRight_toLeftOf="@id/mypage_tv_profile_name"
-        app:layout_constraintTop_toTopOf="@id/mypage_tv_profile_name"
-        app:layout_constraintBottom_toBottomOf="@id/mypage_tv_profile_name"
-        android:layout_marginRight="10dp"
-        android:src="@drawable/flower_1"/>
-
-    <TextView
-        android:id="@+id/mypage_tv_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorConceptDarkGreen"
-        android:text="@string/profile_id"
-        android:fontFamily="@font/mediumfont"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/mypage_tv_profile_name"
-        app:layout_constraintLeft_toLeftOf="@id/mypage_tv_profile_name"
-        android:layout_marginTop="5dp" />
-
-    <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:layout_constraintLeft_toLeftOf="@id/mypage_iv_flower_name"
-        app:layout_constraintTop_toTopOf="@id/mypage_tv_id"
-        app:layout_constraintBottom_toBottomOf="@id/mypage_tv_id"
-        android:layout_marginRight="10dp"
-        android:src="@drawable/flower_1"/>
-
-    <TextView
-        android:id="@+id/mypage_tv_level"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorConceptDarkGreen"
-        android:text="@string/profile_level"
-        android:fontFamily="@font/mediumfont"
-        android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/mypage_tv_id"
-        app:layout_constraintLeft_toLeftOf="@id/mypage_tv_profile_name"
-        android:layout_marginTop="5dp" />
-
-    <ImageView
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        app:layout_constraintLeft_toLeftOf="@id/mypage_iv_flower_name"
-        app:layout_constraintTop_toTopOf="@id/mypage_tv_level"
-        app:layout_constraintBottom_toBottomOf="@id/mypage_tv_level"
-        android:layout_marginRight="10dp"
-        android:src="@drawable/flower_1"/>
-
-    <ImageView
-        android:id="@+id/mypage_iv_level"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        app:layout_constraintTop_toTopOf="@id/mypage_tv_level"
-        app:layout_constraintBottom_toBottomOf="@id/mypage_tv_level"
-        app:layout_constraintLeft_toRightOf="@id/mypage_tv_level"
-        android:layout_marginLeft="5dp"
-        android:src="@drawable/lv_dia"/>
+        <View
+            android:id="@+id/mypage_line_1"
+            app:layout_constraintTop_toBottomOf="@id/mypage_iv_title"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorConceptDarkGreen"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"/>
 
 
+        <!--    아직 처리 안됨-->
+        <ImageView
+            android:id="@+id/mypage_civ_profile"
+            app:layout_constraintTop_toBottomOf="@id/mypage_line_1"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:src="@drawable/ic_person"
+            android:scaleType="fitXY"
+            android:foregroundGravity="center"
+            android:layout_width="80dp"
+            android:layout_height="80dp"/>
+
+
+        <TextView
+            android:id="@+id/mypage_tv_profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorConceptDarkGreen"
+            android:text="@string/profile_name"
+            android:fontFamily="@font/mediumfont"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_civ_profile"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/mypage_iv_flower_name"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintRight_toLeftOf="@id/mypage_tv_profile_name"
+            app:layout_constraintTop_toTopOf="@id/mypage_tv_profile_name"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_tv_profile_name"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/flower_1"/>
+
+        <TextView
+            android:id="@+id/mypage_tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorConceptDarkGreen"
+            android:text="@string/profile_id"
+            android:fontFamily="@font/mediumfont"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_profile_name"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_tv_profile_name"
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_iv_flower_name"
+            app:layout_constraintTop_toTopOf="@id/mypage_tv_id"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_tv_id"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/flower_1"/>
+
+        <TextView
+            android:id="@+id/mypage_tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorConceptDarkGreen"
+            android:text="@string/profile_level"
+            android:fontFamily="@font/mediumfont"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_id"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_tv_profile_name"
+            android:layout_marginTop="5dp" />
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            app:layout_constraintLeft_toLeftOf="@id/mypage_iv_flower_name"
+            app:layout_constraintTop_toTopOf="@id/mypage_tv_level"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_tv_level"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/flower_1"/>
+
+        <ImageView
+            android:id="@+id/mypage_iv_level"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintTop_toTopOf="@id/mypage_tv_level"
+            app:layout_constraintBottom_toBottomOf="@id/mypage_tv_level"
+            app:layout_constraintLeft_toRightOf="@id/mypage_tv_level"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/lv_dia"/>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/mypage_tv_level">
+
+            <ImageView
+                android:id="@+id/mypage_fm_iv_board"
+                android:layout_gravity="center"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/board_img"
+                android:layout_marginTop="-30dp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/mypage_fm_tv_total_meeting_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="30dp"
+                    android:text="@string/total_meeting_count"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/mediumfont" />
+
+                <TextView
+                    android:id="@+id/mypage_fm_tv_total_meeting_count_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/mypage_fm_tv_total_meeting_count"
+                    app:layout_constraintLeft_toRightOf="@id/mypage_fm_tv_total_meeting_count"
+                    android:text="21"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/mediumfont"
+                    android:layout_marginLeft="20dp"/>
+
+                <TextView
+                    android:id="@+id/mypage_fm_tv_total_meeting_late_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/mypage_fm_tv_total_meeting_count"
+                    app:layout_constraintLeft_toLeftOf="@id/mypage_fm_tv_total_meeting_count"
+                    android:text="@string/total_meeting_late_count"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/mediumfont" />
+
+                <TextView
+                    android:id="@+id/mypage_fm_tv_total_meeting_late_count_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/mypage_fm_tv_total_meeting_late_count"
+                    app:layout_constraintLeft_toRightOf="@id/mypage_fm_tv_total_meeting_late_count"
+                    android:text="3"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/mediumfont"
+                    android:layout_marginLeft="20dp"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+        </FrameLayout>
 
 
 
@@ -128,4 +211,6 @@
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

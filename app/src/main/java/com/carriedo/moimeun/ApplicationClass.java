@@ -4,8 +4,6 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-
-
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -26,6 +24,9 @@ public class ApplicationClass extends Application {
 
     // SharedPreferences 키 값
     public static String TAG = "MoiMeun_app";
+    /*
+    putString("user_id",id)
+    * */
 
     // JWT Token 값
     public static String X_ACCESS_TOKEN = "X-ACCESS-TOKEN";
