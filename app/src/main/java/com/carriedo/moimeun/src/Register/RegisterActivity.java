@@ -202,7 +202,8 @@ public class RegisterActivity extends BaseActivity implements RegisterActivityVi
     private void tryPostRegister(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint)
     {
         showProgressDialog();
-        registerService.postRegister(mCustomerBirth,mCustomerEmail,mCustomerId,mCustomerLevel,mCustomerName,mCustomerPassword,mCustomerPenaltyPoint);
+        registerService.postRegister(mCustomerBirth,mCustomerEmail,mCustomerId,mCustomerLevel,mCustomerName,mCustomerPassword,mCustomerPenaltyPoint,0.0,0.0,null);
+
     }
 
     private void tryIdCheck(String id)

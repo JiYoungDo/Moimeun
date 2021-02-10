@@ -20,9 +20,9 @@ public class RegisterService {
     }
 
     //서버 통신
-    void postRegister(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint) {
+    void postRegister(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint, Double mLatitude, Double mLogditude, String profile_img) {
         final RegisterRetrofitInterface registerRetrofitInterface = getRetrofit().create(RegisterRetrofitInterface.class);
-        registerRetrofitInterface.RegisterTest(new RegisterBody(mCustomerBirth, mCustomerEmail,mCustomerId, mCustomerLevel,mCustomerName, mCustomerPassword,mCustomerPenaltyPoint)).enqueue(new Callback<RegisterResponse>() {
+        registerRetrofitInterface.RegisterTest(new RegisterBody(mCustomerBirth, mCustomerEmail,mCustomerId, mCustomerLevel,mCustomerName, mCustomerPassword,mCustomerPenaltyPoint,mLatitude,mLogditude,profile_img)).enqueue(new Callback<RegisterResponse>() {
 
             // 비동기 호출 - 비동기 오류 주의 코드
             @Override

@@ -26,6 +26,8 @@ public class ApplicationClass extends Application {
     public static String TAG = "MoiMeun_app";
     /*
     putString("user_id",id)
+    putString("user_pw",pw);
+
     * */
 
     // JWT Token 값

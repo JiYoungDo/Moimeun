@@ -32,50 +32,66 @@ public class RegisterResponse {
 
     public class CustomerInfo {
 
+
         @SerializedName("customer_birth")
-        private String customerBirth;
+        private String mCustomerBirth;
         @SerializedName("customer_email")
-        private String customerEmail;
+        private String mCustomerEmail;
         @SerializedName("customer_id")
-        private String customerId;
+        private String mCustomerId;
+        @SerializedName("customer_latitude")
+        private Double mCustomerLatitude;
         @SerializedName("customer_level")
-        private Long customerLevel;
+        private int mCustomerLevel;
+        @SerializedName("customer_longitude")
+        private Double mCustomerLongitude;
         @SerializedName("customer_name")
-        private String customerName;
+        private String mCustomerName;
         @SerializedName("customer_password")
-        private String customerPassword;
-        @SerializedName("customer_penalty_point")
-        private Long customerPenaltyPoint;
+        private String mCustomerPassword;
+        @SerializedName("customer_penalty")
+        private int mCustomerPenalty;
+        @SerializedName("customer_profile")
+        private String mCustomerProfile;
 
-        public String getCustomerBirth() {
-            return customerBirth;
+        public String getmCustomerBirth() {
+            return mCustomerBirth;
         }
 
-        public String getCustomerEmail() {
-            return customerEmail;
+        public String getmCustomerEmail() {
+            return mCustomerEmail;
         }
 
-        public String getCustomerId() {
-            return customerId;
+        public String getmCustomerId() {
+            return mCustomerId;
         }
 
-        public Long getCustomerLevel() {
-            return customerLevel;
+        public Double getmCustomerLatitude() {
+            return mCustomerLatitude;
         }
 
-        public String getCustomerName() {
-            return customerName;
+        public int getmCustomerLevel() {
+            return mCustomerLevel;
         }
 
-        public String getCustomerPassword() {
-            return customerPassword;
+        public Double getmCustomerLongitude() {
+            return mCustomerLongitude;
         }
 
-        public Long getCustomerPenaltyPoint() {
-            return customerPenaltyPoint;
+        public String getmCustomerName() {
+            return mCustomerName;
         }
 
+        public String getmCustomerPassword() {
+            return mCustomerPassword;
+        }
 
+        public int getmCustomerPenalty() {
+            return mCustomerPenalty;
+        }
 
+        public String getmCustomerProfile() {
+            return mCustomerProfile;
+        }
     }
 }

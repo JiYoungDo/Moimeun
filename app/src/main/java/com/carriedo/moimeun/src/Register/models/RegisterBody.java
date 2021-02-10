@@ -21,7 +21,17 @@ public class RegisterBody {
     @SerializedName("customer_penalty_point")
     private String mCustomerPenaltyPoint;
 
-    public RegisterBody(String mCustomerBirth, String mCustomerEmail, String mCustomerId, String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint) {
+    @SerializedName("customer_latitude")
+    private Double mCustomerLatitude;
+    @SerializedName("customer_longitude")
+    private Double mCustomerLongitude;
+
+    @SerializedName("customer_profile")
+    private String mCustomerProfile;
+
+    public RegisterBody(String mCustomerBirth, String mCustomerEmail, String mCustomerId,
+                        String mCustomerLevel, String mCustomerName,String mCustomerPassword, String mCustomerPenaltyPoint,
+                        Double mCustomerLatitude, Double mCustomerLongitude, String mCustomerProfile ) {
         this.mCustomerBirth = mCustomerBirth;
         this.mCustomerEmail = mCustomerEmail;
         this.mCustomerId = mCustomerId;
@@ -30,6 +40,9 @@ public class RegisterBody {
         this.mCustomerPassword = mCustomerPassword;
         this.mCustomerPenaltyPoint = mCustomerPenaltyPoint;
 
+        this.mCustomerLatitude = mCustomerLatitude;
+        this.mCustomerLongitude = mCustomerLongitude;
+        this.mCustomerProfile = mCustomerProfile;
     }
 
 }

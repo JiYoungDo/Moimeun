@@ -35,6 +35,24 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // 자동 로그인 처리하기
+        // sharedPreferences에 아무런 정보도 없으므로 값을 저장할 키들을 생성한다.
+        // getString의 첫 번째 인자는 저잗될 키, 두 번째 인자는 값이다.
+        // 처음에는 값이 없어서 키값은 원하는 것으로 하고, 값을 null을 준다.
+        String login_auto_id, login_auto_pw;
+        sSharedPreferences = getSharedPreferences(TAG,MODE_PRIVATE);
+        login_auto_id = sSharedPreferences.getString("user_id","null");
+        login_auto_pw = sSharedPreferences.getString("user_pw","null");
+
+        if(!login_auto_id.equals("null")  && !login_auto_pw.equals("null"))
+        {
+            Toast.makeText(LoginActivity.this, login_auto_id+ "님 자동로그인 입니다.",Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+
         // 뒤로가기
         back_btn = findViewById(R.id.login_iv_back_btn);
         back_btn.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +101,8 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         hideProgressDialog();
 
         String id = loginResponse.getCustomerInfo().getCustomerId();
+        String pw = loginResponse.getCustomerInfo().getCustomerPassword();
+
 
         // 로그인 성공시 액션
         Toast.makeText(this,"로그인 성공",Toast.LENGTH_SHORT).show();
@@ -90,6 +110,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
         sSharedPreferences = getSharedPreferences(TAG,MODE_PRIVATE);
         SharedPreferences.Editor editor = sSharedPreferences.edit();
         editor.putString("user_id",id);
+        editor.putString("user_pw",pw);
         editor.commit();
 
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
