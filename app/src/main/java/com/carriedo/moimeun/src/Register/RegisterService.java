@@ -13,6 +13,7 @@ import retrofit2.Response;
 import static com.carriedo.moimeun.ApplicationClass.getRetrofit;
 
 public class RegisterService {
+
     private final RegisterActivityView mRegisterActivityView;
 
     public RegisterService(RegisterActivityView mRegisterActivityView) {

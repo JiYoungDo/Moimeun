@@ -66,18 +66,22 @@ public class MainActivity extends BaseActivity {
                     {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_fl, mettingFragment).commitAllowingStateLoss();
+                        floatingActionButton.setVisibility(View.VISIBLE);
                         return true;
                     }
                     case R.id.main_menu_my_calendar:
                     {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_fl, calendarFragment).commitAllowingStateLoss();
+
+                        floatingActionButton.setVisibility(View.GONE);
                         return true;
                     }
                     case R.id.main_menu_my_mypage:
                     {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_fl, mypageFragment).commitAllowingStateLoss();
+                        floatingActionButton.setVisibility(View.GONE);
                         return true;
                     }
                     default:
