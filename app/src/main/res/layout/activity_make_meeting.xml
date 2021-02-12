@@ -94,7 +94,19 @@
                 android:layout_marginRight="150dp"
                 android:gravity="center"/>
 
+            <DatePicker
+                android:id="@+id/make_mt_datepicker_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_start_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
+
             <TextView
+                android:id="@+id/make_mt_tv_is_repeat"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="@id/make_mt_et_start_date"
@@ -125,6 +137,17 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:gravity="center"/>
+
+            <DatePicker
+                android:id="@+id/make_mt_datepicker_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_end_date"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:visibility="gone"/>
 
           <RadioGroup
               android:id="@+id/make_mt_rg_sm_bm"
@@ -191,6 +214,22 @@
                 android:layout_marginRight="40dp"
                 android:gravity="center"/>
 
+
+            <EditText
+                android:id="@+id/make_mt_et_late_money_real"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_late_money"
+                app:layout_constraintBottom_toTopOf="@id/make_mt_et_lcation_func"
+                android:hint="지각비 입력"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/colorConceptDarkGreen"
+                android:textColor="@color/colorBlack"
+                android:fontFamily="@font/mediumfont"
+                android:textSize="16sp"/>
+
 <!--            on 누르면 , 위치 정보 받을 수 있는 허용 알림 받아야 함.-->
             <TextView
                 android:id="@+id/make_mt_et_lcation_func"
@@ -202,9 +241,9 @@
                 android:padding="15dp"
                 android:textSize="18sp"
                 android:fontFamily="@font/mediumfont"
-                app:layout_constraintTop_toBottomOf="@id/make_mt_et_late_money"
+                app:layout_constraintTop_toBottomOf="@id/make_mt_et_late_money_real"
                 app:layout_constraintLeft_toLeftOf="parent"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:gravity="center"/>

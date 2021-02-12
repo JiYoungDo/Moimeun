@@ -6,6 +6,6 @@ import com.carriedo.moimeun.src.MakeMeeting.models.MakeMeetingResponse;
 public interface MakeMeetingActivityView {
 
     void MakeMeetingSuccess(MakeMeetingResponse makeMeetingResponse);
-    void MakeMeetingFailure(int code, String message);
+    void MakeMeetingFailure(String message);
 
 }
