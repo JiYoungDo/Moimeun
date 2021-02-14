@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,8 +16,12 @@ import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.Main.MainActivity;
 
 public class CalendarFragment extends Fragment {
+
     ViewGroup viewGroup;
     MainActivity mainActivity;
+    Spinner color_concept_spinner;
+
+    int color_1, color_2, color_3, color_4, color_5, color_6, color_7, color_8, color_9, color_10;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -33,21 +39,21 @@ public class CalendarFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment_calendar, container, false);
-//        ImageButton back_btn = viewGroup.findViewById(R.id.setting_ib_back_btn);
-//        back_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mainActivity.onChangeFragment(6);
-//            }
-//        });
-//
-//        Button change_profile_btn = viewGroup.findViewById(R.id.setting_btn_change_profile);
-//        change_profile_btn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mainActivity.onChangeFragment(7);
-//            }
-//        });
+
+        // [! 후순위 ] 시간표 색 컨셉 _ 위에 칼러 값들 받을 것들을 세팅하는 식으로 해야 할 듯.
+        color_concept_spinner = viewGroup.findViewById(R.id.calendar_fm_spinner_color);
+        color_concept_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                // 스피너에서 선택된 색에 따른 결과 처리
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // default 값
+            }
+        });
+
         return viewGroup;
     }
 }

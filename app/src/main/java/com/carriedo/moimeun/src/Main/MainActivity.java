@@ -19,6 +19,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainActivity extends BaseActivity {
 
     FloatingActionButton floatingActionButton;
+    FloatingActionButton floatingActionButton_calendar;
+
     BottomNavigationView bottomNavigationView;
 
     MettingFragment mettingFragment;
@@ -40,6 +42,14 @@ public class MainActivity extends BaseActivity {
                 Intent intent = new Intent(MainActivity.this, MakeMeetingActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        floatingActionButton_calendar = findViewById(R.id.main_fb_time_table);
+        floatingActionButton_calendar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 새 캘린더 일정 추가
             }
         });
 
@@ -67,6 +77,7 @@ public class MainActivity extends BaseActivity {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_fl, mettingFragment).commitAllowingStateLoss();
                         floatingActionButton.setVisibility(View.VISIBLE);
+                        floatingActionButton_calendar.setVisibility(View.GONE);
                         return true;
                     }
                     case R.id.main_menu_my_calendar:
@@ -75,6 +86,7 @@ public class MainActivity extends BaseActivity {
                                 .replace(R.id.main_fl, calendarFragment).commitAllowingStateLoss();
 
                         floatingActionButton.setVisibility(View.GONE);
+                        floatingActionButton_calendar.setVisibility(View.VISIBLE);
                         return true;
                     }
                     case R.id.main_menu_my_mypage:
@@ -82,6 +94,7 @@ public class MainActivity extends BaseActivity {
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.main_fl, mypageFragment).commitAllowingStateLoss();
                         floatingActionButton.setVisibility(View.GONE);
+                        floatingActionButton_calendar.setVisibility(View.GONE);
                         return true;
                     }
                     default:

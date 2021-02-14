@@ -207,6 +207,9 @@ public class MakeMeetingActivity extends AppCompatActivity  implements MakeMeeti
 
                 if(is_late_money_checked) {
                     late_money = Integer.valueOf(moim_late_money_tv.getText().toString()); }
+                else {
+                    late_money = 0;
+                }
 
                 Log.d("값들 확인", str_end_date + late_money + str_moim_name + str_moim_pw+str_start_date );
                 Log.d("값들 확인", Boolean.toString(is_repeat)+ Boolean.toString(is_small));

@@ -14,4 +14,39 @@
     <color name="colorConceptGreen">#97a884</color>
 
 
+    <color name="colorTimeTable_natural_1">#F5D54A</color>
+    <color name="colorTimeTable_natural_2">#CABDAF</color>
+    <color name="colorTimeTable_natural_3">#357560</color>
+    <color name="colorTimeTable_natural_4">#384727</color>
+    <color name="colorTimeTable_natural_5">#7D8D87</color>
+    <color name="colorTimeTable_natural_6">#B87F45</color>
+    <color name="colorTimeTable_natural_7">#CBC497</color>
+    <color name="colorTimeTable_natural_8">#9EB45B</color>
+    <color name="colorTimeTable_natural_9">#8B341F</color>
+    <color name="colorTimeTable_natural_10">#89A68F</color>
+
+
+    <color name="colorTimeTable_dreamer_1">#F1E3F5</color>
+    <color name="colorTimeTable_dreamer_2">#E5DAF5</color>
+    <color name="colorTimeTable_dreamer_3">#e8ae3c</color>
+    <color name="colorTimeTable_dreamer_4">#ea8933</color>
+    <color name="colorTimeTable_dreamer_5">#73bad3</color>
+    <color name="colorTimeTable_dreamer_6">#ebeab5</color>
+    <color name="colorTimeTable_dreamer_7">#c7eaeb</color>
+    <color name="colorTimeTable_dreamer_8">#cdcaf3</color>
+    <color name="colorTimeTable_dreamer_9">#989ced</color>
+    <color name="colorTimeTable_dreamer_10">#aba5a3</color>
+
+    <color name="colorTimeTable_bright_1">#e9bc84</color>
+    <color name="colorTimeTable_bright_2">#eb6e6c</color>
+    <color name="colorTimeTable_bright_3">#e12e4b</color>
+    <color name="colorTimeTable_bright_4">#f8dda7</color>
+    <color name="colorTimeTable_bright_5">#e8e9ee</color>
+    <color name="colorTimeTable_bright_6">#efd200</color>
+    <color name="colorTimeTable_bright_7">#f57550</color>
+    <color name="colorTimeTable_bright_8">#b0e785</color>
+    <color name="colorTimeTable_bright_9">#531e1b</color>
+    <color name="colorTimeTable_bright_10">#89c4a0</color>
+
+
 </resources>

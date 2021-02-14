@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/darkgreen_line_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <ImageView
+                android:id="@+id/pop_add_calendar_iv_tl_flower"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/flower_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:id="@+id/pop_add_calendar_iv_tr_flower"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/flower_1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/pop_add_calendar_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/add_schedule"
+                app:layout_constraintTop_toTopOf="@id/pop_add_calendar_iv_tl_flower"
+                app:layout_constraintBottom_toBottomOf="@id/pop_add_calendar_iv_tl_flower"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:fontFamily="@font/mediumfont"/>
+
+            <TextView
+                android:id="@+id/pop_add_calendar_tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/day"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/pop_add_calendar_iv_tl_flower"
+                android:layout_marginTop="30dp"
+                app:layout_constraintLeft_toRightOf="@id/pop_add_calendar_iv_tl_flower"
+                android:layout_marginLeft="40dp"/>
+
+            <Spinner
+                android:id="@+id/pop_add_calendar_spinner_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/all_dark_green_roung_bg"
+                android:padding="3dp"
+                android:entries="@array/calendar_days"
+                app:layout_constraintTop_toTopOf="@id/pop_add_calendar_tv_day"
+                app:layout_constraintBottom_toBottomOf="@id/pop_add_calendar_tv_day"
+                app:layout_constraintLeft_toRightOf="@id/pop_add_calendar_tv_day"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/pop_add_calendar_tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/time"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintLeft_toLeftOf="@id/pop_add_calendar_tv_day"
+                app:layout_constraintTop_toBottomOf="@id/pop_add_calendar_tv_day"
+                android:layout_marginTop="15dp"/>
+
+            <Spinner
+                android:id="@+id/pop_add_calendar_spinner_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/all_dark_green_roung_bg"
+                android:padding="3dp"
+                android:entries="@array/calendar_time"
+                app:layout_constraintTop_toTopOf="@id/pop_add_calendar_tv_time"
+                app:layout_constraintBottom_toBottomOf="@id/pop_add_calendar_tv_time"
+                app:layout_constraintLeft_toRightOf="@id/pop_add_calendar_tv_time"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/pop_add_calendar_tv_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/repeat"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintLeft_toLeftOf="@id/pop_add_calendar_tv_time"
+                app:layout_constraintTop_toBottomOf="@id/pop_add_calendar_tv_time"
+                android:layout_marginTop="15dp"/>
+
+            <Spinner
+                android:id="@+id/pop_add_calendar_spinner_on_off"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/all_dark_green_roung_bg"
+                android:padding="3dp"
+                android:entries="@array/on_off"
+                app:layout_constraintTop_toTopOf="@id/pop_add_calendar_tv_on_off"
+                app:layout_constraintBottom_toBottomOf="@id/pop_add_calendar_tv_on_off"
+                app:layout_constraintLeft_toRightOf="@id/pop_add_calendar_tv_on_off"
+                android:layout_marginLeft="20dp"/>
+
+            <EditText
+                android:id="@+id/pop_add_calendar_et_schedule_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/all_dark_green_roung_bg"
+                android:fontFamily="@font/mediumfont"
+                app:layout_constraintTop_toBottomOf="@id/pop_add_calendar_spinner_on_off"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="60dp"
+                android:hint="@string/schedule_name"
+                android:textColorHint="@color/colorConceptGreen"
+                android:textColor="@color/colorConceptWhite"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/pop_add_calendar_iv_bl_flower"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/flower_1"
+                app:layout_constraintBottom_toBottomOf ="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:id="@+id/pop_add_calendar_iv_br_flower"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/flower_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,8 +23,20 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@id/main_bnv"
         app:fab_icon="@drawable/plus"
-        app:fab_colorNormal="@color/colorConceptGreen"
+        app:fab_colorNormal="@color/colorConceptDarkGreen"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"/>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_fb_time_table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/main_bnv"
+        app:fab_icon="@drawable/plus"
+        app:fab_colorNormal="@color/colorConceptYellow"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"/>
 

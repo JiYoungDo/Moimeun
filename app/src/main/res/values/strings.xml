@@ -44,5 +44,72 @@
     <string name="profile_level">Lv.</string>
     <string name="total_meeting_count">"총 모임횟수 : "</string>
     <string name="total_meeting_late_count">"총 지각횟수 : "</string>
+    <string name="time_table_time">시간</string>
+    <string name="time_table_monday">월</string>
+    <string name="time_table_tue">화</string>
+    <string name="time_table_wed">수</string>
+    <string name="time_table_thu">목</string>
+    <string name="time_table_fri">금</string>
+    <string name="time_table_sat">토</string>
+    <string name="time_table_sun">일</string>
+    <string name="time_table_9_10"> 9 - 10</string>
+    <string name="time_table_10_11">10 - 11</string>
+    <string name="time_table_11_12">11 - 12</string>
+    <string name="time_table_12_13">12 - 13</string>
+    <string name="time_table_13_14">13 - 14</string>
+    <string name="time_table_14_15">14 - 15</string>
+    <string name="time_table_15_16">15 - 16</string>
+    <string name="time_table_16_17">16 - 17</string>
+    <string name="time_table_17_18">17 - 18</string>
+    <string name="time_table_18_19">18 - 19</string>
+    <string name="time_table_19_20">19 - 20</string>
+    <string name="time_table_20_21">20 - 21</string>
+    <string name="time_table_21_22">21 - 22</string>
+    <string name="time_table_22_23">22 - 23</string>
+    <string name="time_table_23_24">23 - 24</string>
+    <string name="add_schedule">스케줄 추가</string>
+    <string name="day">요일</string>
+    <string name="time">시간</string>
+    <string name="repeat">반복</string>
+    <string name="schedule_name">스케줄 이름</string>
+
+    <string-array name="color_spinner">
+        <item>새싹이 싹튼 색</item>
+        <item>꿈꾸는 다락방 색</item>
+        <item>아이 눈부셔 색</item>
+    </string-array>
+
+    <string-array name="calendar_days">
+        <item>월</item>
+        <item>화</item>
+        <item>수</item>
+        <item>목</item>
+        <item>금</item>
+        <item>토</item>
+        <item>일</item>
+    </string-array>
+
+    <string-array name="calendar_time">
+        <item> 9 - 10 </item>
+        <item> 10 - 11 </item>
+        <item> 11 - 12 </item>
+        <item> 12 - 13 </item>
+        <item> 13 - 14 </item>
+        <item> 14 - 15 </item>
+        <item> 15 - 16 </item>
+        <item> 16 - 17 </item>
+        <item> 17 - 18 </item>
+        <item> 18 - 19 </item>
+        <item> 19 - 20 </item>
+        <item> 20 - 21 </item>
+        <item> 21 - 22 </item>
+        <item> 22 - 23 </item>
+        <item> 23 - 24 </item>
+    </string-array>
+
+    <string-array name="on_off">
+        <item> ON </item>
+        <item> OFF </item>
+    </string-array>
 
 </resources>
