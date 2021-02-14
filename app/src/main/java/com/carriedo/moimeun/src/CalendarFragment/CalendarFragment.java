@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +25,21 @@ public class CalendarFragment extends Fragment {
     Spinner color_concept_spinner;
 
     int color_1, color_2, color_3, color_4, color_5, color_6, color_7, color_8, color_9, color_10;
+    TextView row_1_1, row_1_2, row_1_3, row_1_4, row_1_5, row_1_6, row_1_7,
+            row_2_1, row_2_2, row_2_3, row_2_4, row_2_5, row_2_6, row_2_7,
+            row_3_1, row_3_2, row_3_3, row_3_4, row_3_5, row_3_6, row_3_7,
+            row_4_1, row_4_2, row_4_3, row_4_4, row_4_5, row_4_6, row_4_7,
+            row_5_1, row_5_2, row_5_3, row_5_4, row_5_5, row_5_6, row_5_7,
+            row_6_1, row_6_2, row_6_3, row_6_4, row_6_5, row_6_6, row_6_7,
+            row_7_1, row_7_2, row_7_3, row_7_4, row_7_5, row_7_6, row_7_7,
+            row_8_1, row_8_2, row_8_3, row_8_4, row_8_5, row_8_6, row_8_7,
+            row_9_1, row_9_2, row_9_3, row_9_4, row_9_5, row_9_6, row_9_7,
+            row_10_1, row_10_2, row_10_3, row_10_4, row_10_5, row_10_6, row_10_7,
+            row_11_1, row_11_2, row_11_3, row_11_4, row_11_5, row_11_6, row_11_7,
+            row_12_1, row_12_2, row_12_3, row_12_4, row_12_5, row_12_6, row_12_7,
+            row_13_1, row_13_2, row_13_3, row_13_4, row_13_5, row_13_6, row_13_7,
+            row_14_1, row_14_2, row_14_3, row_14_4, row_14_5, row_14_6, row_14_7,
+            row_15_1, row_15_2, row_15_3, row_15_4, row_15_5, row_15_6, row_15_7;
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -100,6 +116,129 @@ public class CalendarFragment extends Fragment {
                 // default 값
             }
         });
+
+        row_1_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_1);
+        row_1_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_2);
+        row_1_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_3);
+        row_1_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_4);
+        row_1_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_5);
+        row_1_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_6);
+        row_1_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_1_7);
+
+        row_2_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_1);
+        row_2_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_2);
+        row_2_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_3);
+        row_2_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_4);
+        row_2_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_5);
+        row_2_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_6);
+        row_2_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_2_7);
+
+        row_3_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_1);
+        row_3_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_2);
+        row_3_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_3);
+        row_3_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_4);
+        row_3_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_5);
+        row_3_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_6);
+        row_3_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_3_7);
+
+        row_4_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_1);
+        row_4_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_2);
+        row_4_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_3);
+        row_4_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_4);
+        row_4_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_5);
+        row_4_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_6);
+        row_4_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_4_7);
+
+        row_5_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_1);
+        row_5_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_2);
+        row_5_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_3);
+        row_5_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_4);
+        row_5_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_5);
+        row_5_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_6);
+        row_5_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_5_7);
+
+        row_6_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_1);
+        row_6_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_2);
+        row_6_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_3);
+        row_6_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_4);
+        row_6_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_5);
+        row_6_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_6);
+        row_6_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_6_7);
+
+        row_7_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_1);
+        row_7_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_2);
+        row_7_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_3);
+        row_7_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_4);
+        row_7_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_5);
+        row_7_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_6);
+        row_7_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_7_7);
+
+        row_8_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_1);
+        row_8_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_2);
+        row_8_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_3);
+        row_8_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_4);
+        row_8_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_5);
+        row_8_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_6);
+        row_8_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_8_7);
+
+        row_9_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_1);
+        row_9_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_2);
+        row_9_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_3);
+        row_9_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_4);
+        row_9_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_5);
+        row_9_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_6);
+        row_9_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_9_7);
+
+        row_10_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_1);
+        row_10_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_2);
+        row_10_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_3);
+        row_10_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_4);
+        row_10_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_5);
+        row_10_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_6);
+        row_10_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_10_7);
+
+        row_11_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_1);
+        row_11_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_2);
+        row_11_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_3);
+        row_11_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_4);
+        row_11_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_5);
+        row_11_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_6);
+        row_11_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_11_7);
+
+        row_12_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_1);
+        row_12_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_2);
+        row_12_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_3);
+        row_12_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_4);
+        row_12_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_5);
+        row_12_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_6);
+        row_12_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_12_7);
+
+        row_13_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_1);
+        row_13_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_2);
+        row_13_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_3);
+        row_13_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_4);
+        row_13_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_5);
+        row_13_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_6);
+        row_13_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_13_7);
+
+        row_14_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_1);
+        row_14_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_2);
+        row_14_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_3);
+        row_14_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_4);
+        row_14_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_5);
+        row_14_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_6);
+        row_14_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_14_7);
+
+        row_15_1 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_1);
+        row_15_2 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_2);
+        row_15_3 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_3);
+        row_15_4 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_4);
+        row_15_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_5);
+        row_15_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_6);
+        row_15_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_7);
+
+
+
 
         return viewGroup;
     }

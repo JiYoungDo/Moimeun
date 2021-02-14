@@ -209,7 +209,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -222,7 +222,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -235,7 +235,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -248,7 +248,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -261,7 +261,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -275,7 +275,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -288,7 +288,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_1_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -320,7 +320,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -333,7 +333,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -346,7 +346,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -359,7 +359,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -372,7 +372,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -386,7 +386,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -399,7 +399,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_2_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -431,7 +431,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -444,7 +444,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -457,7 +457,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -470,7 +470,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -483,7 +483,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -497,7 +497,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -510,7 +510,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_3_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -542,7 +542,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -555,7 +555,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -568,7 +568,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -581,7 +581,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -594,7 +594,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -608,7 +608,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -621,7 +621,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_4_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -653,7 +653,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -666,7 +666,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -679,7 +679,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:background="@color/colorConceptWhite"
@@ -693,7 +693,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -706,7 +706,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -720,7 +720,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -733,7 +733,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_5_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -765,7 +765,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -778,7 +778,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -791,7 +791,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -804,7 +804,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -817,7 +817,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -831,7 +831,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -844,7 +844,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_6_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -876,7 +876,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -889,7 +889,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -902,7 +902,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -915,7 +915,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -928,7 +928,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -942,7 +942,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -955,7 +955,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_7_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -987,7 +987,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1000,7 +1000,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1013,7 +1013,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1026,7 +1026,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1039,7 +1039,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1053,7 +1053,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1066,7 +1066,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_8_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1098,7 +1098,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1111,7 +1111,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1124,7 +1124,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1137,7 +1137,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1150,7 +1150,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1164,7 +1164,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1177,7 +1177,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_9_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1209,7 +1209,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1222,7 +1222,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1235,7 +1235,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1248,7 +1248,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1261,7 +1261,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1275,7 +1275,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1288,7 +1288,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_10_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1320,7 +1320,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1333,7 +1333,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1346,7 +1346,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1359,7 +1359,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1372,7 +1372,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1386,7 +1386,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1399,7 +1399,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_11_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1431,7 +1431,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1444,7 +1444,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1457,7 +1457,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1470,7 +1470,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1483,7 +1483,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1497,7 +1497,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1510,7 +1510,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_12_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1542,7 +1542,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1555,7 +1555,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1568,7 +1568,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1581,7 +1581,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1594,7 +1594,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1608,7 +1608,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1621,7 +1621,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_13_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1653,7 +1653,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1666,7 +1666,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1679,7 +1679,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1692,7 +1692,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1705,7 +1705,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1719,7 +1719,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1732,7 +1732,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_14_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1764,7 +1764,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_1"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1777,7 +1777,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_2"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1790,7 +1790,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_3"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1803,7 +1803,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1816,7 +1816,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_5"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1830,7 +1830,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_6"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
@@ -1843,7 +1843,7 @@
                     <TextView
                         android:id="@+id/calendar_fm_table_row_15_7"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
                         android:layout_marginLeft="1dp"
                         android:layout_marginBottom="1dp"
                         android:gravity="center"
