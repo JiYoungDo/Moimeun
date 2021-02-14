@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/darkgreen_line_not_round_bg"
+    android:layout_gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="@drawable/darkgreen_line_bg"
+        android:layout_height="280dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginLeft="40dp"
@@ -16,7 +17,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp">
+            android:layout_height="280dp">
 
             <ImageView
                 android:id="@+id/pop_add_calendar_iv_tl_flower"
@@ -62,7 +63,7 @@
                 app:layout_constraintTop_toBottomOf="@id/pop_add_calendar_iv_tl_flower"
                 android:layout_marginTop="30dp"
                 app:layout_constraintLeft_toRightOf="@id/pop_add_calendar_iv_tl_flower"
-                android:layout_marginLeft="40dp"/>
+                android:layout_marginLeft="20dp"/>
 
             <Spinner
                 android:id="@+id/pop_add_calendar_spinner_day"
@@ -131,6 +132,8 @@
                 android:background="@drawable/all_dark_green_roung_bg"
                 android:fontFamily="@font/mediumfont"
                 app:layout_constraintTop_toBottomOf="@id/pop_add_calendar_spinner_on_off"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="60dp"
                 android:layout_marginRight="60dp"
@@ -160,6 +163,22 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginBottom="20dp"
                 android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/pop_add_calendar_tv_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/colorConceptDarkGreen"
+                android:text="@string/create_schedule"
+                android:background="@drawable/dark_line_to_full_selector"
+                android:padding="10dp"
+                app:layout_constraintTop_toTopOf="@id/pop_add_calendar_iv_bl_flower"
+                app:layout_constraintBottom_toBottomOf="@id/pop_add_calendar_iv_bl_flower"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="@font/mediumfont"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

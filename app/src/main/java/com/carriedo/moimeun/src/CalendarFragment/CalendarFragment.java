@@ -2,6 +2,7 @@ package com.carriedo.moimeun.src.CalendarFragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.carriedo.moimeun.src.Main.MainActivity;
 
 public class CalendarFragment extends Fragment {
 
+   //  [!] 테이블 레이아웃
     ViewGroup viewGroup;
     MainActivity mainActivity;
     Spinner color_concept_spinner;
@@ -46,6 +48,51 @@ public class CalendarFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 // 스피너에서 선택된 색에 따른 결과 처리
+                if(position==0)
+                {
+                    Log.d("선택된 색",parent.getItemAtPosition(position).toString());
+
+                    color_1 = getResources().getColor(R.color.colorTimeTable_natural_1);
+                    color_2 = getResources().getColor(R.color.colorTimeTable_natural_2);
+                    color_3 = getResources().getColor(R.color.colorTimeTable_natural_3);
+                    color_4 = getResources().getColor(R.color.colorTimeTable_natural_4);
+                    color_5 = getResources().getColor(R.color.colorTimeTable_natural_5);
+                    color_6 = getResources().getColor(R.color.colorTimeTable_natural_6);
+                    color_7 = getResources().getColor(R.color.colorTimeTable_natural_7);
+                    color_8 = getResources().getColor(R.color.colorTimeTable_natural_8);
+                    color_9 = getResources().getColor(R.color.colorTimeTable_natural_9);
+                    color_10 = getResources().getColor(R.color.colorTimeTable_natural_10);
+
+                }else if(position == 1)
+                {
+                    Log.d("선택된 색",parent.getItemAtPosition(position).toString());
+
+                    color_1 = getResources().getColor(R.color.colorTimeTable_dreamer_1);
+                    color_2 = getResources().getColor(R.color.colorTimeTable_dreamer_2);
+                    color_3 = getResources().getColor(R.color.colorTimeTable_dreamer_3);
+                    color_4 = getResources().getColor(R.color.colorTimeTable_dreamer_4);
+                    color_5 = getResources().getColor(R.color.colorTimeTable_dreamer_5);
+                    color_6 = getResources().getColor(R.color.colorTimeTable_dreamer_6);
+                    color_7 = getResources().getColor(R.color.colorTimeTable_dreamer_7);
+                    color_8 = getResources().getColor(R.color.colorTimeTable_dreamer_8);
+                    color_9 = getResources().getColor(R.color.colorTimeTable_dreamer_9);
+                    color_10 = getResources().getColor(R.color.colorTimeTable_dreamer_10);
+
+                }else if(position == 2)
+                {
+                    Log.d("선택된 색",parent.getItemAtPosition(position).toString());
+
+                    color_1 = getResources().getColor(R.color.colorTimeTable_bright_1);
+                    color_2 = getResources().getColor(R.color.colorTimeTable_bright_2);
+                    color_3 = getResources().getColor(R.color.colorTimeTable_bright_3);
+                    color_4 = getResources().getColor(R.color.colorTimeTable_bright_4);
+                    color_5 = getResources().getColor(R.color.colorTimeTable_bright_5);
+                    color_6 = getResources().getColor(R.color.colorTimeTable_bright_6);
+                    color_7 = getResources().getColor(R.color.colorTimeTable_bright_7);
+                    color_8 = getResources().getColor(R.color.colorTimeTable_bright_8);
+                    color_9 = getResources().getColor(R.color.colorTimeTable_bright_9);
+                    color_10 = getResources().getColor(R.color.colorTimeTable_bright_10);
+                }
             }
 
             @Override

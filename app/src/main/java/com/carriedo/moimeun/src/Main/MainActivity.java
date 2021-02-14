@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.carriedo.moimeun.BaseActivity;
 import com.carriedo.moimeun.R;
+import com.carriedo.moimeun.src.CalendarFragment.AddScheduleDialog;
 import com.carriedo.moimeun.src.CalendarFragment.CalendarFragment;
 import com.carriedo.moimeun.src.MakeMeeting.MakeMeetingActivity;
 import com.carriedo.moimeun.src.MeetingFragment.MettingFragment;
@@ -50,6 +51,8 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 // 새 캘린더 일정 추가
+                AddScheduleDialog addScheduleDialog = new AddScheduleDialog(MainActivity.this);
+                addScheduleDialog.callFunction();
             }
         });
 

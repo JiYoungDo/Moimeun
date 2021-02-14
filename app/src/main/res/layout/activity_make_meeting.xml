@@ -288,7 +288,7 @@
                 android:textColor="@color/colorConceptDarkGreen"
                 android:text="@string/create_meeting"
                 android:fontFamily="@font/mediumfont"
-                android:background="@drawable/darkgreen_line_bg"
+                android:background="@drawable/dark_line_to_full_selector"
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
                 android:paddingTop="15dp"

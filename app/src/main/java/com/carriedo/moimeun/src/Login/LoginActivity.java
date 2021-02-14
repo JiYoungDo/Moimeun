@@ -37,7 +37,7 @@ public class LoginActivity extends BaseActivity implements LoginActivityView {
 
         // 자동 로그인 처리하기
         // sharedPreferences에 아무런 정보도 없으므로 값을 저장할 키들을 생성한다.
-        // getString의 첫 번째 인자는 저잗될 키, 두 번째 인자는 값이다.
+        // getString의 첫 번째 인자는 저장될 키, 두 번째 인자는 값이다.
         // 처음에는 값이 없어서 키값은 원하는 것으로 하고, 값을 null을 준다.
         String login_auto_id, login_auto_pw;
         sSharedPreferences = getSharedPreferences(TAG,MODE_PRIVATE);

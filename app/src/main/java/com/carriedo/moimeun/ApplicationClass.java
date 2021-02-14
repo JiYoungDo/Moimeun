@@ -27,7 +27,10 @@ public class ApplicationClass extends Application {
     /*
     putString("user_id",id)
     putString("user_pw",pw);
-
+    putString("temp_schedule_day", String.valueOf(spinner_day))
+    editor.putString("temp_schedule_time", String.valueOf(spinner_time));
+    editor.putString("temp_schedule_on_off", String.valueOf(spinner_on_off));
+     editor.putString("temp_schedule_name",get_name);
     * */
 
     // JWT Token 값
