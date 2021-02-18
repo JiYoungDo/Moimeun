@@ -2,6 +2,7 @@ package com.carriedo.moimeun.src.MeetingFragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,10 +15,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.carriedo.moimeun.R;
 import com.carriedo.moimeun.src.Main.MainActivity;
+import com.carriedo.moimeun.src.MakeMeeting.models.MakeMeetingResponse;
+import com.carriedo.moimeun.src.MeetingFragment.interfaces.MeetingListActivityView;
+import com.carriedo.moimeun.src.MeetingFragment.models.UserMeettingResponse;
+import com.carriedo.moimeun.src.MyPageFragment.MypageService;
 
 import java.util.ArrayList;
 
-public class MettingFragment extends Fragment {
+import static android.content.Context.MODE_PRIVATE;
+import static com.carriedo.moimeun.ApplicationClass.TAG;
+import static com.carriedo.moimeun.ApplicationClass.sSharedPreferences;
+
+public class MettingFragment extends Fragment implements MeetingListActivityView {
 
     ViewGroup viewGroup;
     MainActivity mainActivity;
@@ -26,10 +35,20 @@ public class MettingFragment extends Fragment {
     RecyclerView meeting_recyclerview;
     ArrayList meeting_list;
 
+    String str_user_id;
+    ArrayList meeting_link_list;
+
+    MeetingListService meetingListService = new MeetingListService(this);
+
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         mainActivity = (MainActivity) getActivity();
+
+        // sharedpreference 에 저장되어 있는
+        sSharedPreferences = context.getSharedPreferences(TAG,MODE_PRIVATE);
+        str_user_id = sSharedPreferences.getString("user_id","");
     }
 
     @Override
@@ -47,14 +66,19 @@ public class MettingFragment extends Fragment {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity,LinearLayoutManager.VERTICAL,false);
         meeting_recyclerview.setLayoutManager(linearLayoutManager);
 
+
+        TryGetMeetingList(str_user_id);
+
         meeting_list = new ArrayList<>();
 
-        // Dummy
-        MeetingItem meetingItem = new MeetingItem("소융과 모여라","87");
-        MeetingItem meetingItem_1 = new MeetingItem("모이믄 앱 런칭 모임","8");
+        // [!] Dummy - meeting_list에 받아온 값을 넣어햐 함.
+        // meeting_list 에서 값을 받아오는건 모임들 링크
+        // 모임들의 정보는 해당 링크를 get 하여 얻어와야 한다.
+        // MeetingItem meetingItem = new MeetingItem("소융과 모여라","87");
+        //  MeetingItem meetingItem_1 = new MeetingItem("모이믄 앱 런칭 모임","8");
 
-        meeting_list.add(meetingItem);
-        meeting_list.add(meetingItem_1);
+        // meeting_list.add(meetingItem);
+        // meeting_list.add(meetingItem_1);
 
 
         // 어댑터
@@ -69,5 +93,50 @@ public class MettingFragment extends Fragment {
         meetingAdapter.notifyDataSetChanged();
 
         return viewGroup;
+    }
+
+
+    private void TryGetMeetingList(String user_id)
+    {
+        meetingListService.getMeetingList(user_id);
+    }
+
+    private void TryGetMoimInfo(String moim_link)
+    {
+        meetingListService.getMoimInfo(moim_link);
+    }
+
+
+
+    @Override
+    public void MeetingListSuccess(UserMeettingResponse userMeettingResponse) {
+
+        meeting_link_list = userMeettingResponse.getResult();
+
+        for(int i = 0; i < meeting_link_list.size(); i++)
+        {
+            Log.d("미팅 링크",meeting_link_list.get(i).toString());
+            TryGetMoimInfo(meeting_link_list.get(i).toString());
+        }
+    }
+
+    @Override
+    public void MeetingListFailure(String message) {
+        Log.d("MeetingListFailure", message);
+    }
+
+    @Override
+    public void GetMoimInfoSuccess(MakeMeetingResponse makeMeetingResponse) {
+
+        MeetingItem meetingItem = new MeetingItem(makeMeetingResponse.getMoimInfo().getMoimName().toString(),"50");
+        meeting_list.add(meetingItem);
+
+        meetingAdapter.notifyDataSetChanged();
+
+    }
+
+    @Override
+    public void GetMoimInfoFailure(String message) {
+        Log.d("GetMoimInfoFailure", message);
     }
 }
