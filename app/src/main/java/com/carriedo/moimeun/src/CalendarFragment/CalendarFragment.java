@@ -238,8 +238,6 @@ public class CalendarFragment extends Fragment {
         row_15_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_7);
 
 
-
-
         return viewGroup;
     }
 }

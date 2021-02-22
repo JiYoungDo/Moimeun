@@ -18,8 +18,6 @@ public class MypageService {
         this.mypageActivityView = mypageActivityView;
     }
 
-
-
     void getMypage(String customer_id) {
         final MypageRetrofitInterface mypageRetrofitInterface = getRetrofit().create(MypageRetrofitInterface.class);
         mypageRetrofitInterface.MyPageGetTest(customer_id).enqueue(new Callback<IdCheckResponse>() {
@@ -41,6 +39,31 @@ public class MypageService {
             @Override
             public void onFailure(Call<IdCheckResponse> call, Throwable t) {
                 mypageActivityView.MypageFailure("통신 실패");
+            }
+        });
+    }
+
+    void deleteMypage(String customer_id) {
+        final MypageRetrofitInterface mypageRetrofitInterface = getRetrofit().create(MypageRetrofitInterface.class);
+        mypageRetrofitInterface.MyPageDeleteTest(customer_id).enqueue(new Callback<IdCheckResponse>() {
+
+            // 비동기 호출 - 비동기 오류 주의 코드
+            @Override
+            public void onResponse(Call<IdCheckResponse> call, Response<IdCheckResponse> response) {
+                // 성공시
+                final IdCheckResponse idCheckResponse = response.body();
+                if (idCheckResponse == null) {
+                    mypageActivityView.UserDeleteFailure("통신 성공, null 값");
+                    return;
+                }
+
+                mypageActivityView.UserDeleteSuccess(idCheckResponse);
+            }
+
+            // API 통신이 실패했을 시
+            @Override
+            public void onFailure(Call<IdCheckResponse> call, Throwable t) {
+                mypageActivityView.UserDeleteFailure("통신 실패");
             }
         });
     }

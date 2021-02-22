@@ -113,11 +113,18 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
 
         meeting_link_list = userMeettingResponse.getResult();
 
-        for(int i = 0; i < meeting_link_list.size(); i++)
+        int size;
+
+        if (meeting_link_list == null) { size = 0; }
+        else {size = meeting_link_list.size();}
+
+        for(int i = 0; i < size; i++)
         {
             Log.d("미팅 링크",meeting_link_list.get(i).toString());
             TryGetMoimInfo(meeting_link_list.get(i).toString());
         }
+
+
     }
 
     @Override

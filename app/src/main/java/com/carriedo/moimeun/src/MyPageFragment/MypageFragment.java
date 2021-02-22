@@ -1,6 +1,10 @@
 package com.carriedo.moimeun.src.MyPageFragment;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,12 +12,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.carriedo.moimeun.R;
+import com.carriedo.moimeun.src.Login.LoginActivity;
 import com.carriedo.moimeun.src.Main.MainActivity;
 import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageActivityView;
 import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
@@ -34,6 +40,7 @@ public class MypageFragment extends Fragment implements MypageActivityView {
     TextView total_meeting_count_tv;
     TextView total_meeting_late_count_tv;
 
+    TextView delete_all_user_info;
 
     // sharedpreference에서 읽어 올 아이디를 담을 값
     String user_id;
@@ -68,6 +75,47 @@ public class MypageFragment extends Fragment implements MypageActivityView {
         total_meeting_count_tv = viewGroup.findViewById(R.id.mypage_fm_tv_total_meeting_count_num);
         total_meeting_late_count_tv = viewGroup.findViewById(R.id.mypage_fm_tv_total_meeting_late_count_num);
 
+
+        // 회원 탈퇴
+        delete_all_user_info = viewGroup.findViewById(R.id.mypage_tv_delete_all_info);
+        delete_all_user_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+                builder.setTitle("회원 탈퇴").setMessage("정말 탈퇴하시겠습니까?");
+                builder.setPositiveButton("네", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 회원 탈퇴 처리
+                        tryDeleteMypageInfo(user_id);
+
+
+                        sSharedPreferences = getContext().getSharedPreferences(TAG,MODE_PRIVATE);
+
+                        SharedPreferences.Editor editor = sSharedPreferences.edit();
+                        Intent intent = new Intent(mainActivity, LoginActivity.class);
+
+                        editor.clear();
+                        editor.commit();
+                        Toast.makeText(getContext(),"모든 데이터 삭제 완료, 회원 탈퇴 완료",Toast.LENGTH_SHORT).show();
+
+                        startActivity(intent);
+                        mainActivity.finish();
+                    }
+                });
+
+                builder.setNegativeButton("아니오", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // 취소
+                    }
+                });
+
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
+        });
+
         tryGetMypageInfo(user_id);
 
         return viewGroup;
@@ -77,6 +125,10 @@ public class MypageFragment extends Fragment implements MypageActivityView {
     private void tryGetMypageInfo(String user_id)
     {
         mypageService.getMypage(user_id);
+    }
+    private void tryDeleteMypageInfo(String user_id)
+    {
+        mypageService.deleteMypage(user_id);
     }
 
 
@@ -114,6 +166,16 @@ public class MypageFragment extends Fragment implements MypageActivityView {
 
     @Override
     public void MypageFailure(String message) {
+        Log.d("통신 실패",message);
+    }
+
+    @Override
+    public void UserDeleteSuccess(IdCheckResponse idCheckResponse) {
+
+    }
+
+    @Override
+    public void UserDeleteFailure(String message) {
         Log.d("통신 실패",message);
     }
 
