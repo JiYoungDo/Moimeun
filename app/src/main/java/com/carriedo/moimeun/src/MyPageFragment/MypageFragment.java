@@ -19,10 +19,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.carriedo.moimeun.R;
-import com.carriedo.moimeun.src.Login.LoginActivity;
-import com.carriedo.moimeun.src.Main.MainActivity;
+import com.carriedo.moimeun.src.LoginActivity.LoginActivity;
+import com.carriedo.moimeun.src.MainActivity.MainActivity;
 import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageActivityView;
-import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
+import com.carriedo.moimeun.src.RegisterActivity.models.IdCheckResponse;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.carriedo.moimeun.ApplicationClass.TAG;

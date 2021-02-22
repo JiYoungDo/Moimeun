@@ -1,6 +1,6 @@
 package com.carriedo.moimeun.src.MeetingFragment.interfaces;
 
-import com.carriedo.moimeun.src.MakeMeeting.models.MakeMeetingResponse;
+import com.carriedo.moimeun.src.MakeMeetingActivity.models.MakeMeetingResponse;
 import com.carriedo.moimeun.src.MeetingFragment.models.UserMeettingResponse;
 
 

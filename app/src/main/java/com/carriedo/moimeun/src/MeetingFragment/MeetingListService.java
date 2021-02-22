@@ -1,12 +1,9 @@
 package com.carriedo.moimeun.src.MeetingFragment;
 
-import com.carriedo.moimeun.src.MakeMeeting.models.MakeMeetingResponse;
+import com.carriedo.moimeun.src.MakeMeetingActivity.models.MakeMeetingResponse;
 import com.carriedo.moimeun.src.MeetingFragment.interfaces.MeetingListActivityView;
 import com.carriedo.moimeun.src.MeetingFragment.interfaces.MeetingListRetrofitInterface;
 import com.carriedo.moimeun.src.MeetingFragment.models.UserMeettingResponse;
-import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageActivityView;
-import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageRetrofitInterface;
-import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;

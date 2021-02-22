@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:background="@color/colorConceptWhite"
     android:layout_height="match_parent"
-    tools:context=".src.MakeMeeting.MakeMeetingActivity">
+    tools:context=".src.MakeMeetingActivity.MakeMeetingActivity">
 
     <ImageView
         android:id="@+id/make_mt_iv_back_btn"

@@ -14,11 +14,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carriedo.moimeun.R;
-import com.carriedo.moimeun.src.Main.MainActivity;
-import com.carriedo.moimeun.src.MakeMeeting.models.MakeMeetingResponse;
+import com.carriedo.moimeun.src.MainActivity.MainActivity;
+import com.carriedo.moimeun.src.MakeMeetingActivity.models.MakeMeetingResponse;
 import com.carriedo.moimeun.src.MeetingFragment.interfaces.MeetingListActivityView;
 import com.carriedo.moimeun.src.MeetingFragment.models.UserMeettingResponse;
-import com.carriedo.moimeun.src.MyPageFragment.MypageService;
 
 import java.util.ArrayList;
 

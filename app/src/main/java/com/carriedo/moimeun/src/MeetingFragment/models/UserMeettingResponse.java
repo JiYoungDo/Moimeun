@@ -1,6 +1,5 @@
 package com.carriedo.moimeun.src.MeetingFragment.models;
 
-import com.carriedo.moimeun.src.MakeMeeting.models.MakeMeetingResponse;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;

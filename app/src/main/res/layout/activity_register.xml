@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorConceptWhite"
-    tools:context=".src.Register.RegisterActivity">
+    tools:context=".src.RegisterActivity.RegisterActivity">
 
     <ImageView
         android:id="@+id/register_iv_back_btn"

@@ -1,6 +1,6 @@
 package com.carriedo.moimeun.src.MyPageFragment.interfaces;
 
-import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
+import com.carriedo.moimeun.src.RegisterActivity.models.IdCheckResponse;
 
 public interface MypageActivityView {
 

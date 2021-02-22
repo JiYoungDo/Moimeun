@@ -6,7 +6,7 @@
     android:background="@color/colorConceptWhite"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.Main.MainActivity">
+    tools:context=".src.MainActivity.MainActivity">
 
     <FrameLayout
         android:id="@+id/main_fl"

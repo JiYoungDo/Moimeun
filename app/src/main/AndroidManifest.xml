@@ -12,17 +12,18 @@
         android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".src.MakeMeeting.MakeMeetingActivity"></activity>
-        <activity android:name=".src.Login.LoginActivity" />
-        <activity android:name=".src.Register.RegisterActivity" />
-        <activity android:name=".src.Splash.SplashActivity">
+        <activity android:name=".src.DetailMeetingActivity.DetailMeetingActivity"></activity>
+        <activity android:name=".src.MakeMeetingActivity.MakeMeetingActivity" />
+        <activity android:name=".src.LoginActivity.LoginActivity" />
+        <activity android:name=".src.RegisterActivity.RegisterActivity" />
+        <activity android:name=".src.SplashActivity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".src.Main.MainActivity" />
+        <activity android:name=".src.MainActivity.MainActivity" />
     </application>
 
 </manifest>

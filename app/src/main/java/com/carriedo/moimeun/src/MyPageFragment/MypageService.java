@@ -2,7 +2,7 @@ package com.carriedo.moimeun.src.MyPageFragment;
 
 import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageActivityView;
 import com.carriedo.moimeun.src.MyPageFragment.interfaces.MypageRetrofitInterface;
-import com.carriedo.moimeun.src.Register.models.IdCheckResponse;
+import com.carriedo.moimeun.src.RegisterActivity.models.IdCheckResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
