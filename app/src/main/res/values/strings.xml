@@ -44,7 +44,7 @@
     <string name="profile_level">Lv.</string>
     <string name="total_meeting_count">"총 모임횟수 : "</string>
     <string name="total_meeting_late_count">"총 지각횟수 : "</string>
-    <string name="time_table_time">시간</string>
+    <string name="time_table_time">시 간</string>
     <string name="time_table_monday">월</string>
     <string name="time_table_tue">화</string>
     <string name="time_table_wed">수</string>
@@ -74,6 +74,10 @@
     <string name="schedule_name">스케줄 이름</string>
     <string name="create_schedule">추가 하기</string>
     <string name="delete_all_info">모이믄 탈퇴하기</string>
+    <string name="meeting_schedule">모두의 스케줄</string>
+    <string name="meeting_schedule_time_title">추천 모임 시간</string>
+    <string name="modify_schedule_time">모임 시간 수정하기</string>
+    <string name="meeting_schedule_location_title" >추천 모임 장</string>
 
     <string-array name="color_spinner">
         <item>새싹이 싹튼 색</item>
