@@ -77,7 +77,12 @@
     <string name="meeting_schedule">모두의 스케줄</string>
     <string name="meeting_schedule_time_title">추천 모임 시간</string>
     <string name="modify_schedule_time">모임 시간 수정하기</string>
-    <string name="meeting_schedule_location_title" >추천 모임 장</string>
+    <string name="meeting_schedule_location_title" >추천 모임 장소</string>
+    <string name="modify_schedule_location">모임 장소 수정하기</string>
+    <string name="is_gps_on">이 모임의 gps 추적 기능은</string>
+    <string name="on">ON</string>
+    <string name="is_penalty_on">이 모임의 벌금 기능은</string>
+    <string name="off">OFF</string>
 
     <string-array name="color_spinner">
         <item>새싹이 싹튼 색</item>
