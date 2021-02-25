@@ -8,6 +8,8 @@ public class MakeMeetingResponse {
 
     @SerializedName("code")
     private int code;
+    @SerializedName("count")
+    private int count;
     @SerializedName("isSuccess")
     private Boolean isSuccess;
     @SerializedName("message")
@@ -17,6 +19,10 @@ public class MakeMeetingResponse {
 
     public int getCode() {
         return code;
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public Boolean getIsSuccess() {

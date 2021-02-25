@@ -3,11 +3,15 @@ package com.carriedo.moimeun.src.MeetingFragment.models;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserMeettingResponse {
 
-    @SerializedName("result")
-    private ArrayList result;
+    @SerializedName("results")
+    private ArrayList results;
+
+    @SerializedName("count")
+    private int count;
     @SerializedName("isSuccess")
     private Boolean isSuccess;
     @SerializedName("message")
@@ -16,7 +20,11 @@ public class UserMeettingResponse {
     private int code;
 
     public ArrayList getResult() {
-        return result;
+        return results;
+    }
+
+    public int getCount() {
+        return count;
     }
 
     public Boolean getSuccess() {

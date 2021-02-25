@@ -1,6 +1,7 @@
 package com.carriedo.moimeun.src.MeetingFragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,12 +15,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.carriedo.moimeun.R;
+import com.carriedo.moimeun.src.DetailMeetingActivity.DetailMeetingActivity;
 import com.carriedo.moimeun.src.MainActivity.MainActivity;
 import com.carriedo.moimeun.src.MakeMeetingActivity.models.MakeMeetingResponse;
 import com.carriedo.moimeun.src.MeetingFragment.interfaces.MeetingListActivityView;
 import com.carriedo.moimeun.src.MeetingFragment.models.UserMeettingResponse;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static android.content.Context.MODE_PRIVATE;
 import static com.carriedo.moimeun.ApplicationClass.TAG;
@@ -35,7 +38,6 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
     ArrayList meeting_list;
 
     String str_user_id;
-    ArrayList meeting_link_list;
 
     MeetingListService meetingListService = new MeetingListService(this);
 
@@ -65,20 +67,10 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity,LinearLayoutManager.VERTICAL,false);
         meeting_recyclerview.setLayoutManager(linearLayoutManager);
 
-
+        Log.d("미팅 프래그먼트", str_user_id);
         TryGetMeetingList(str_user_id);
 
-        meeting_list = new ArrayList<>();
-
-        // [!] Dummy - meeting_list에 받아온 값을 넣어햐 함.
-        // meeting_list 에서 값을 받아오는건 모임들 링크
-        // 모임들의 정보는 해당 링크를 get 하여 얻어와야 한다.
-        // MeetingItem meetingItem = new MeetingItem("소융과 모여라","87");
-        //  MeetingItem meetingItem_1 = new MeetingItem("모이믄 앱 런칭 모임","8");
-
-        // meeting_list.add(meetingItem);
-        // meeting_list.add(meetingItem_1);
-
+        meeting_list = new ArrayList<String>();
 
         // 어댑터
         meetingAdapter = new MeetingAdapter(meeting_list);
@@ -86,7 +78,10 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
         meetingAdapter.setOnItemClickListener(new MeetingAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(View v, int pos) {
-
+                // 해당 모임 조회
+                Intent intent = new Intent(getContext(), DetailMeetingActivity.class);
+                startActivity(intent);
+                getActivity().finish();
             }
         });
         meetingAdapter.notifyDataSetChanged();
@@ -110,19 +105,14 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
     @Override
     public void MeetingListSuccess(UserMeettingResponse userMeettingResponse) {
 
-        meeting_link_list = userMeettingResponse.getResult();
+        int count = userMeettingResponse.getCount();
+        Log.d("111_count", String.valueOf(count));
 
-        int size;
-
-        if (meeting_link_list == null) { size = 0; }
-        else {size = meeting_link_list.size();}
-
-        for(int i = 0; i < size; i++)
+        for(int i = 0; i < count; i++ )
         {
-            Log.d("미팅 링크",meeting_link_list.get(i).toString());
-            TryGetMoimInfo(meeting_link_list.get(i).toString());
+            String temp_link = (String) userMeettingResponse.getResult().get(i);
+            TryGetMoimInfo(temp_link);
         }
-
 
     }
 
@@ -134,7 +124,7 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
     @Override
     public void GetMoimInfoSuccess(MakeMeetingResponse makeMeetingResponse) {
 
-        MeetingItem meetingItem = new MeetingItem(makeMeetingResponse.getMoimInfo().getMoimName().toString(),"50");
+        MeetingItem meetingItem = new MeetingItem(makeMeetingResponse.getMoimInfo().getMoimName(), String.valueOf(makeMeetingResponse.getCount()));
         meeting_list.add(meetingItem);
 
         meetingAdapter.notifyDataSetChanged();
