@@ -25,6 +25,7 @@ public class CalendarFragment extends Fragment {
     Spinner color_concept_spinner;
 
     int color_1, color_2, color_3, color_4, color_5, color_6, color_7, color_8, color_9, color_10;
+
     TextView row_1_1, row_1_2, row_1_3, row_1_4, row_1_5, row_1_6, row_1_7,
             row_2_1, row_2_2, row_2_3, row_2_4, row_2_5, row_2_6, row_2_7,
             row_3_1, row_3_2, row_3_3, row_3_4, row_3_5, row_3_6, row_3_7,
@@ -60,6 +61,7 @@ public class CalendarFragment extends Fragment {
 
         // [! 후순위 ] 시간표 색 컨셉 _ 위에 칼러 값들 받을 것들을 세팅하는 식으로 해야 할 듯.
         color_concept_spinner = viewGroup.findViewById(R.id.calendar_fm_spinner_color);
+
         color_concept_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -236,6 +238,16 @@ public class CalendarFragment extends Fragment {
         row_15_5 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_5);
         row_15_6 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_6);
         row_15_7 = viewGroup.findViewById(R.id.calendar_fm_table_row_15_7);
+
+
+        row_1_1.setBackgroundColor(color_1);
+        row_1_2.setBackgroundColor(color_1);
+
+        row_3_1.setBackgroundColor(color_2);
+        row_3_2.setBackgroundColor(color_2);
+        row_3_2.setBackgroundColor(color_2);
+
+
 
 
         return viewGroup;

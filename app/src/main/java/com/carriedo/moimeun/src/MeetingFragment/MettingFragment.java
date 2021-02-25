@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -41,6 +43,11 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
 
     MeetingListService meetingListService = new MeetingListService(this);
 
+    EditText moim_link_et;
+    EditText moim_link_pw_et;
+    TextView moim_join_btn_tv;
+
+
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -66,6 +73,11 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
         meeting_recyclerview = viewGroup.findViewById(R.id.meeting_fm_rv);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mainActivity,LinearLayoutManager.VERTICAL,false);
         meeting_recyclerview.setLayoutManager(linearLayoutManager);
+
+        moim_link_et = viewGroup.findViewById(R.id.meeting_fm_tv_join_meeting);
+        moim_join_btn_tv = viewGroup.findViewById(R.id.meeting_fm_btn_join_meeting);
+        moim_link_pw_et = viewGroup.findViewById(R.id.meeting_fm_tv_join_meeting_pw);
+
 
         Log.d("미팅 프래그먼트", str_user_id);
         TryGetMeetingList(str_user_id);
@@ -124,6 +136,7 @@ public class MettingFragment extends Fragment implements MeetingListActivityView
     @Override
     public void GetMoimInfoSuccess(MakeMeetingResponse makeMeetingResponse) {
 
+        // [!] meetingResponse.get Count API 아직 안 나옴.
         MeetingItem meetingItem = new MeetingItem(makeMeetingResponse.getMoimInfo().getMoimName(), String.valueOf(makeMeetingResponse.getCount()));
         meeting_list.add(meetingItem);
 

@@ -42,7 +42,7 @@
         android:textSize="32sp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:background="@drawable/darkgreen_line_bg"
+        android:background="@drawable/dark_line_to_full_selector"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
         android:layout_marginTop="40dp"/>
@@ -62,7 +62,7 @@
         android:textSize="32sp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
-        android:background="@drawable/darkgreen_line_bg"/>
+        android:background="@drawable/dark_line_to_full_selector"/>
 
 
 
